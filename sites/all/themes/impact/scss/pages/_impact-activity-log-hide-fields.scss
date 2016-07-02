@@ -1,0 +1,48 @@
+// hide these fields
+.view-impact-log,
+.view-activity-log {
+  #edit-field-tags-tid-wrapper,
+  #edit-field-tags-code-for-africa-tid-wrapper,
+  #edit-field-tags-pri-tid-wrapper,
+  #edit-field-story-hechinger-tid-wrapper,
+  #edit-field-story-pri-tid-wrapper,
+  #edit-field-submitter-tid-wrapper {
+    display: none;
+  }
+}
+
+
+// show for Center of Investigative Reporting (Reveal)
+.domain-cir-test-impact-tracker-org {
+  #edit-field-tags-tid-wrapper {
+    display: table-cell;
+  }
+}
+
+
+// show for Code for Africa
+.domain-codeforafrica-impact-tracker-org {
+  #edit-field-tags-code-for-africa-tid-wrapper {
+    display: table-cell;
+  }
+}
+
+// show for Hechinger
+.domain-hechinger-test-impact-tracker-org {
+  .view-impact-log {
+    #edit-field-story-hechinger-tid-wrapper,
+    #edit-field-submitter-tid-wrapper {
+      display: table-cell;
+    }
+  }
+}
+
+// show for PRI
+.domain-pri-impact-tracker-org {
+  .view-impact-log {
+    #edit-field-tags-pri-tid-wrapper,
+    #edit-field-story-pri-tid-wrapper {
+      display: table-cell;
+    }
+  }
+}

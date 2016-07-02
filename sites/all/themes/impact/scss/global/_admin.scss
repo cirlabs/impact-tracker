@@ -1,0 +1,29 @@
+// get rid of ugly shadow on admin menu
+
+#admin-menu {
+  @include box-shadow(none);
+}
+
+// tabs
+ul.primary {
+  padding-left: 0;
+  border-color: $line-color;
+  color: $light-text-color;
+  li a {
+    display: inline-block;
+    margin: 0 0 -1px 0;
+    padding: 0.5em 1em;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: $light-background;
+    color: $light-text-color;
+    &:hover {
+      color: $light-text-color-hover;
+    }
+  }
+  li.active a,
+  li a {
+    border-color: $line-color;
+    border-bottom-color: #fff;
+  }
+}

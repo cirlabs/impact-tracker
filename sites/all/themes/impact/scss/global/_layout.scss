@@ -1,0 +1,22 @@
+* {
+  @include box-sizing(border-box);
+}
+
+body {
+  margin: 0;
+}
+
+.page-main {
+  padding: 60px 20px 40px;
+}
+
+.narrow-page {
+  .page-main {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.block + .block {
+  margin-top: 1em;
+}

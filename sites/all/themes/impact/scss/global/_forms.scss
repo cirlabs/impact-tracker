@@ -1,0 +1,113 @@
+input,
+select,
+textarea,
+button,
+.button {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.5em 0.8em 0.6em;
+  background: #fff;
+  @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+  &:focus {
+    outline: 0;
+    border-color: #66afe9;
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6));
+  }
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+}
+
+select {
+  height: 36px;
+}
+
+label,
+.fieldset-legend {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.form-item {
+  margin: 1.5em 0;
+  .description {
+    margin-top: 0.5em;
+    color: $light-text-color;
+    font-size: 14px;
+  }
+  input.error {
+    border: 1px solid #a94442;
+    &:focus {
+      border-color: #843534;
+      @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483);
+    }
+  }
+}
+
+.container-inline-date .date-padding {
+  padding: 0;
+  float: none;
+}
+
+.tabledrag-toggle-weight-wrapper {
+  display: none;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+.button {
+  display: inline-block;
+  width: auto;
+  background: #5cb85c;
+  border: 1px solid #4cae4c;
+  color: #fff;
+  @include box-shadow(none);
+  margin-top: 0.5em !important;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+input[value="Remove"],
+input[value="Reset"],
+.hide-timeline {
+  background: #d9534f;
+  border: 1px solid #d43f3a;
+}
+
+.form-type-managed-file {
+  border: 1px solid $line-color;
+  margin: 0.5em 0 0;
+  padding: 10px;
+  border-radius: 3px;
+  .filefield-sources-list {
+    margin-bottom: 0.25em;
+    a {
+      color: $light-text-color;
+      font-size: 14px;
+      &:hover {
+        color: $light-text-color-hover;
+      }
+    }
+  }
+}
+
+.grippie {
+  display: none;
+}

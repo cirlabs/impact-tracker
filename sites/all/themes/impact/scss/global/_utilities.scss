@@ -1,0 +1,55 @@
+// cause elements to expand to contain floated children
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+
+// Image Replacement: hide text on an element, keeping it visible to screen readers
+
+.ir {
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+// Visually Hidden: hide element on the page, but keep it visible to screen readers. Useful for form labels.
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+
+
+// When light colored text is shown on a darker background, OS X will generally render it too bold due to its sub-pixel anti-aliasing algorithm. This can sometimes be fixed by adding the following rules, though this will sometimes result in too thin text, so use it cautiously.
+
+.font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+// make links the same color as the surrounding text, except for when they are hovered
+
+.stealth-links {
+  a {
+    color: inherit;
+    &:hover {
+      color: $link-color-hover;
+    }
+  }
+}

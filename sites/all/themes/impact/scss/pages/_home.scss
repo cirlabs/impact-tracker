@@ -1,0 +1,35 @@
+// homepage
+
+.home-add-outcome,
+.home-add-activity {
+  display: block;
+  background: $light-background;
+  border: 1px solid $line-color;
+  @include border-radius(10px);
+  text-align: center;
+  font-weight: bold;
+  padding: 40px 0;
+  text-decoration: none;
+  h1 {
+    font-size: 36px;
+    margin: 30px 0 0 0;
+    color: $primary-text-color;
+  }
+  span {
+    font-size: 70px;
+    margin: 0 10px;
+  }
+  &:hover {
+    background: $light-background-hover;
+    text-decoration: none;
+    h1 {
+      color: $primary-text-color-hover;
+    }
+  }
+}
+
+.front {
+  #page-title {
+    display: none;
+  }
+}

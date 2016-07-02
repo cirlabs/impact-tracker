@@ -1,0 +1,1127 @@
+/* line 4, ../scss/global/_utilities.scss */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 15, ../scss/global/_utilities.scss */
+.ir {
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 24, ../scss/global/_utilities.scss */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 39, ../scss/global/_utilities.scss */
+.font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 49, ../scss/global/_utilities.scss */
+.stealth-links a {
+  color: inherit;
+}
+/* line 51, ../scss/global/_utilities.scss */
+.stealth-links a:hover {
+  color: #285f8f;
+}
+
+/* line 1, ../scss/global/_layout.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 5, ../scss/global/_layout.scss */
+body {
+  margin: 0;
+}
+
+/* line 9, ../scss/global/_layout.scss */
+.page-main {
+  padding: 60px 20px 40px;
+}
+
+/* line 14, ../scss/global/_layout.scss */
+.narrow-page .page-main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* line 20, ../scss/global/_layout.scss */
+.block + .block {
+  margin-top: 1em;
+}
+
+/* line 1, ../scss/global/_typography.scss */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  font-size: 16px;
+}
+
+/* line 7, ../scss/global/_typography.scss */
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+/* line 10, ../scss/global/_typography.scss */
+a:hover {
+  color: #285f8f;
+  text-decoration: underline;
+}
+
+/* line 19, ../scss/global/_typography.scss */
+h1, h2 {
+  font-size: 48px;
+  margin: 0 0 1em 0;
+}
+
+/* line 3, ../scss/global/_admin.scss */
+#admin-menu {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 8, ../scss/global/_admin.scss */
+ul.primary {
+  padding-left: 0;
+  border-color: #e7e7e7;
+  color: #777;
+}
+/* line 12, ../scss/global/_admin.scss */
+ul.primary li a {
+  display: inline-block;
+  margin: 0 0 -1px 0;
+  padding: 0.5em 1em;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background: #f8f8f8;
+  color: #777;
+}
+/* line 20, ../scss/global/_admin.scss */
+ul.primary li a:hover {
+  color: #333;
+}
+/* line 24, ../scss/global/_admin.scss */
+ul.primary li.active a,
+ul.primary li a {
+  border-color: #e7e7e7;
+  border-bottom-color: #fff;
+}
+
+@font-face {
+  font-family: "cir-icons";
+  src: url("../fonts/cir-icons.eot");
+  src: url("../fonts/cir-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/cir-icons.woff") format("woff"), url("../fonts/cir-icons.ttf") format("truetype"), url("../fonts/cir-icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 17, ../scss/global/_icons.scss */
+[data-icon]:before {
+  font-family: "cir-icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 30, ../scss/global/_icons.scss */
+[class^="icon-"]:before,
+[class*=" icon-"]:before,
+.iconify:before,
+.field-name-field-media label:before,
+.field-name-field-media .field-label:before,
+.field-name-field-macro label:before,
+.field-name-field-macro .field-label:before,
+.field-name-field-meso label:before,
+.field-name-field-meso .field-label:before,
+.field-name-field-micro label:before,
+.field-name-field-micro .field-label:before {
+  font-family: "cir-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 44, ../scss/global/_icons.scss */
+.icon-tce:before {
+  content: "\61";
+}
+
+/* line 47, ../scss/global/_icons.scss */
+.icon-impact:before {
+  content: "\62";
+}
+
+/* line 50, ../scss/global/_icons.scss */
+.icon-media:before, .field-name-field-media label:before,
+.field-name-field-media .field-label:before {
+  content: "\63";
+}
+
+/* line 53, ../scss/global/_icons.scss */
+.icon-macro:before, .field-name-field-macro label:before,
+.field-name-field-macro .field-label:before {
+  content: "\64";
+}
+
+/* line 56, ../scss/global/_icons.scss */
+.icon-micro:before, .field-name-field-micro label:before,
+.field-name-field-micro .field-label:before {
+  content: "\65";
+}
+
+/* line 59, ../scss/global/_icons.scss */
+.icon-icomoon-4:before {
+  content: "\66";
+}
+
+/* line 62, ../scss/global/_icons.scss */
+.icon-exit:before {
+  content: "\67";
+}
+
+/* line 65, ../scss/global/_icons.scss */
+.icon-circle:before {
+  content: "\68";
+}
+
+/* line 68, ../scss/global/_icons.scss */
+.icon-other:before {
+  content: "\69";
+}
+
+/* line 71, ../scss/global/_icons.scss */
+.icon-meso:before, .field-name-field-meso label:before,
+.field-name-field-meso .field-label:before {
+  content: "\6a";
+}
+
+/* line 1, ../scss/global/_footer.scss */
+.page-footer {
+  border-top: 1px solid #e7e7e7;
+  font-size: 14px;
+  color: #777;
+  margin: 0 20px;
+  padding: 0.5em 0 1em;
+}
+
+/* line 1, ../scss/global/_forms.scss */
+input,
+select,
+textarea,
+button,
+.button {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.5em 0.8em 0.6em;
+  background: #fff;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+/* line 15, ../scss/global/_forms.scss */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+.button:focus {
+  outline: 0;
+  border-color: #66afe9;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+/* line 22, ../scss/global/_forms.scss */
+input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+}
+
+/* line 27, ../scss/global/_forms.scss */
+select {
+  height: 36px;
+}
+
+/* line 31, ../scss/global/_forms.scss */
+label,
+.fieldset-legend {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+/* line 37, ../scss/global/_forms.scss */
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 43, ../scss/global/_forms.scss */
+.form-item {
+  margin: 1.5em 0;
+}
+/* line 45, ../scss/global/_forms.scss */
+.form-item .description {
+  margin-top: 0.5em;
+  color: #777;
+  font-size: 14px;
+}
+/* line 50, ../scss/global/_forms.scss */
+.form-item input.error {
+  border: 1px solid #a94442;
+}
+/* line 52, ../scss/global/_forms.scss */
+.form-item input.error:focus {
+  border-color: #843534;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+
+/* line 59, ../scss/global/_forms.scss */
+.container-inline-date .date-padding {
+  padding: 0;
+  float: none;
+}
+
+/* line 64, ../scss/global/_forms.scss */
+.tabledrag-toggle-weight-wrapper {
+  display: none;
+}
+
+/* line 68, ../scss/global/_forms.scss */
+button,
+input[type="button"],
+input[type="submit"],
+.button {
+  display: inline-block;
+  width: auto;
+  background: #5cb85c;
+  border: 1px solid #4cae4c;
+  color: #fff;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin-top: 0.5em !important;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* line 81, ../scss/global/_forms.scss */
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.button:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 87, ../scss/global/_forms.scss */
+input[value="Remove"],
+input[value="Reset"],
+.hide-timeline {
+  background: #d9534f;
+  border: 1px solid #d43f3a;
+}
+
+/* line 94, ../scss/global/_forms.scss */
+.form-type-managed-file {
+  border: 1px solid #e7e7e7;
+  margin: 0.5em 0 0;
+  padding: 10px;
+  border-radius: 3px;
+}
+/* line 99, ../scss/global/_forms.scss */
+.form-type-managed-file .filefield-sources-list {
+  margin-bottom: 0.25em;
+}
+/* line 101, ../scss/global/_forms.scss */
+.form-type-managed-file .filefield-sources-list a {
+  color: #777;
+  font-size: 14px;
+}
+/* line 104, ../scss/global/_forms.scss */
+.form-type-managed-file .filefield-sources-list a:hover {
+  color: #333;
+}
+
+/* line 111, ../scss/global/_forms.scss */
+.grippie {
+  display: none;
+}
+
+/* line 1, ../scss/global/_tables.scss */
+.views-table {
+  border-right: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+}
+/* line 6, ../scss/global/_tables.scss */
+.views-table tr {
+  border-top: 1px solid #e7e7e7;
+}
+/* line 8, ../scss/global/_tables.scss */
+.views-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+/* line 13, ../scss/global/_tables.scss */
+.views-table td, .views-table th {
+  padding: 8px;
+  position: relative;
+  border-left: 1px solid #e7e7e7;
+}
+/* line 18, ../scss/global/_tables.scss */
+.views-table td:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  background: url(../img/td-fade-white.png) right center repeat-y;
+}
+/* line 29, ../scss/global/_tables.scss */
+.views-table td.active {
+  background: none;
+}
+/* line 33, ../scss/global/_tables.scss */
+.views-table tr:nth-child(even) td:after {
+  background-image: url(../img/td-fade-gray.png);
+}
+/* line 37, ../scss/global/_tables.scss */
+.views-table th {
+  font-size: 16px;
+}
+/* line 39, ../scss/global/_tables.scss */
+.views-table th.active {
+  background: #f8f8f8;
+}
+
+/* line 1, ../scss/global/_fields.scss */
+.field-collection-container {
+  border: none;
+}
+
+/* line 3, ../scss/components/_navigation.scss */
+.main-menu {
+  background: #f8f8f8;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 0 10px;
+}
+/* line 7, ../scss/components/_navigation.scss */
+.main-menu .content {
+  line-height: 48px;
+}
+/* line 10, ../scss/components/_navigation.scss */
+.main-menu .content ul, .main-menu .content li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 15, ../scss/components/_navigation.scss */
+.main-menu .content a {
+  display: block;
+  text-decoration: none;
+  color: #777;
+  padding: 0 10px;
+}
+/* line 20, ../scss/components/_navigation.scss */
+.main-menu .content a:hover {
+  color: #333;
+}
+/* line 24, ../scss/components/_navigation.scss */
+.main-menu .content li {
+  display: inline-block;
+}
+/* line 29, ../scss/components/_navigation.scss */
+.main-menu [class^="icon-"]:before, .main-menu [class*=" icon-"]:before {
+  margin-right: 0.35em;
+}
+
+/* line 35, ../scss/components/_navigation.scss */
+.region-menu-top-left {
+  float: left;
+}
+/* line 38, ../scss/components/_navigation.scss */
+.region-menu-top-left .content .first {
+  font-size: 20px;
+  font-weight: bold;
+}
+/* line 41, ../scss/components/_navigation.scss */
+.region-menu-top-left .content .first a {
+  color: #333;
+}
+/* line 43, ../scss/components/_navigation.scss */
+.region-menu-top-left .content .first a:hover {
+  color: #1a1a1a;
+}
+
+/* line 51, ../scss/components/_navigation.scss */
+.region-menu-top-right {
+  float: right;
+}
+
+/* line 1, ../scss/components/_messages.scss */
+div.error {
+  color: #a94442;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  border-radius: 3px;
+}
+
+/* line 8, ../scss/components/_messages.scss */
+div.status {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  border-radius: 3px;
+}
+
+/* line 1, ../scss/components/_views-pagination.scss */
+.item-list .pager {
+  font-size: 16px;
+  margin-top: 2em;
+}
+/* line 4, ../scss/components/_views-pagination.scss */
+.item-list .pager li {
+  margin-left: 1em;
+}
+
+/* line 8, ../scss/components/_iconify-fields.scss */
+.field-name-field-media label:before,
+.field-name-field-media .field-label:before,
+.field-name-field-macro label:before,
+.field-name-field-macro .field-label:before,
+.field-name-field-meso label:before,
+.field-name-field-meso .field-label:before,
+.field-name-field-micro label:before,
+.field-name-field-micro .field-label:before {
+  margin-right: 0.5em;
+}
+
+/* line 3, ../scss/pages/_home.scss */
+.home-add-outcome,
+.home-add-activity {
+  display: block;
+  background: #f8f8f8;
+  border: 1px solid #e7e7e7;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  padding: 40px 0;
+  text-decoration: none;
+}
+/* line 13, ../scss/pages/_home.scss */
+.home-add-outcome h1,
+.home-add-activity h1 {
+  font-size: 36px;
+  margin: 30px 0 0 0;
+  color: #333;
+}
+/* line 18, ../scss/pages/_home.scss */
+.home-add-outcome span,
+.home-add-activity span {
+  font-size: 70px;
+  margin: 0 10px;
+}
+/* line 22, ../scss/pages/_home.scss */
+.home-add-outcome:hover,
+.home-add-activity:hover {
+  background: #f0f0f0;
+  text-decoration: none;
+}
+/* line 25, ../scss/pages/_home.scss */
+.home-add-outcome:hover h1,
+.home-add-activity:hover h1 {
+  color: #1a1a1a;
+}
+
+/* line 32, ../scss/pages/_home.scss */
+.front #page-title {
+  display: none;
+}
+
+/* line 4, ../scss/pages/_add-outcome-activity.scss */
+.page-node-add-outcome .field-name-field-publications td:first-child,
+.page-node-add-activity .field-name-field-publications td:first-child {
+  display: none;
+}
+/* line 7, ../scss/pages/_add-outcome-activity.scss */
+.page-node-add-outcome .field-name-field-publications td,
+.page-node-add-activity .field-name-field-publications td {
+  padding: 10px;
+}
+/* line 10, ../scss/pages/_add-outcome-activity.scss */
+.page-node-add-outcome .field-name-field-publications .form-type-checkbox,
+.page-node-add-activity .field-name-field-publications .form-type-checkbox {
+  width: 50%;
+  float: left;
+  margin: 0 0 0.5em 0;
+}
+/* line 16, ../scss/pages/_add-outcome-activity.scss */
+.page-node-add-outcome .field-name-field-mediums,
+.page-node-add-outcome .field-name-field-link,
+.page-node-add-activity .field-name-field-mediums,
+.page-node-add-activity .field-name-field-link {
+  margin-top: 0.8em;
+}
+/* line 21, ../scss/pages/_add-outcome-activity.scss */
+.page-node-add-outcome .field-name-field-date label,
+.page-node-add-activity .field-name-field-date label {
+  display: none;
+}
+/* line 24, ../scss/pages/_add-outcome-activity.scss */
+.page-node-add-outcome .field-name-field-date .date-padding,
+.page-node-add-activity .field-name-field-date .date-padding {
+  padding-left: 0 !important;
+}
+/* line 29, ../scss/pages/_add-outcome-activity.scss */
+.page-node-add-outcome .field-name-field-story-partner .fieldset-wrapper,
+.page-node-add-activity .field-name-field-story-partner .fieldset-wrapper {
+  background: #eee;
+  padding: 10px;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  margin-top: 0.5em;
+}
+/* line 36, ../scss/pages/_add-outcome-activity.scss */
+.page-node-add-outcome .field-name-field-story-partner .form-item,
+.page-node-add-activity .field-name-field-story-partner .form-item {
+  margin: 0;
+}
+
+/* line 2, ../scss/pages/_outcome.scss */
+.node-type-outcome #page-title {
+  font-size: 24px;
+  margin-top: 1em;
+}
+/* line 6, ../scss/pages/_outcome.scss */
+.node-type-outcome .field {
+  margin-top: 1.5em;
+}
+/* line 9, ../scss/pages/_outcome.scss */
+.node-type-outcome .field-label {
+  margin-bottom: 0.25em;
+}
+
+/* line 16, ../scss/pages/_outcome.scss */
+.field-name-field-publications .field-collection-view {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+/* line 21, ../scss/pages/_outcome.scss */
+.field-name-field-publications .field-item {
+  margin: 0 !important;
+}
+/* line 24, ../scss/pages/_outcome.scss */
+.field-name-field-publications input.autocomplete-deluxe-form {
+  display: inline-block;
+}
+
+/* line 2, ../scss/pages/_login.scss */
+.page-user-login #page-title {
+  display: none;
+}
+
+/* line 1, ../scss/pages/_impact-activity-log.scss */
+.impact-filters-toggle {
+  margin: 0 0 20px 0;
+}
+
+/* line 4, ../scss/pages/_impact-activity-log.scss */
+.impact-filters {
+  display: none;
+  position: relative;
+  border: 1px solid #e7e7e7;
+  background: #f8f8f8;
+  padding: 20px 5px;
+  margin-bottom: 20px;
+}
+/* line 11, ../scss/pages/_impact-activity-log.scss */
+.impact-filters table {
+  vertical-align: top;
+  border: none;
+}
+/* line 15, ../scss/pages/_impact-activity-log.scss */
+.impact-filters tbody {
+  border: none;
+}
+/* line 18, ../scss/pages/_impact-activity-log.scss */
+.impact-filters td {
+  vertical-align: top;
+  padding: 3px;
+  width: 12.5%;
+}
+/* line 23, ../scss/pages/_impact-activity-log.scss */
+.impact-filters .views-widget {
+  border: 1px solid #e7e7e7;
+  background: #fff;
+  border-radius: 3px;
+  padding: 10px 5px;
+  font-size: 14px;
+  height: 250px;
+  overflow: scroll;
+}
+/* line 32, ../scss/pages/_impact-activity-log.scss */
+.impact-filters .form-item {
+  margin: 0;
+  clear: left;
+}
+/* line 36, ../scss/pages/_impact-activity-log.scss */
+.impact-filters .bef-toggle {
+  display: block;
+}
+/* line 39, ../scss/pages/_impact-activity-log.scss */
+.impact-filters input[type="checkbox"] {
+  float: left;
+  display: block;
+  margin: 2px 0 0 0;
+}
+/* line 45, ../scss/pages/_impact-activity-log.scss */
+.impact-filters .form-type-bef-checkbox label {
+  display: block;
+  margin: 5px 0 0 1.25em;
+}
+/* line 50, ../scss/pages/_impact-activity-log.scss */
+.impact-filters .buttons {
+  text-align: right;
+  padding: 10px 10px 0 10px;
+}
+/* line 54, ../scss/pages/_impact-activity-log.scss */
+.impact-filters .views-submit-button,
+.impact-filters .views-reset-button {
+  display: inline-block;
+  margin-left: 1em;
+}
+/* line 58, ../scss/pages/_impact-activity-log.scss */
+.impact-filters .views-submit-button input,
+.impact-filters .views-reset-button input {
+  font-size: 18px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+/* line 65, ../scss/pages/_impact-activity-log.scss */
+.impact-filters .views-widget-filter-field_date_value input {
+  width: 8em;
+}
+/* line 68, ../scss/pages/_impact-activity-log.scss */
+.impact-filters .views-widget-filter-field_date_value .description {
+  font-size: 12px;
+  margin-bottom: 1em;
+}
+/* line 74, ../scss/pages/_impact-activity-log.scss */
+.impact-filters #edit-title-wrapper {
+  position: absolute;
+  left: 10px;
+  bottom: 20px;
+  padding: 0;
+  width: auto;
+}
+/* line 80, ../scss/pages/_impact-activity-log.scss */
+.impact-filters #edit-title-wrapper .views-widget {
+  height: auto;
+  border: none;
+  background: none;
+  padding: 0;
+}
+/* line 86, ../scss/pages/_impact-activity-log.scss */
+.impact-filters #edit-title-wrapper label {
+  float: left;
+  padding: 7px 10px 0 0;
+}
+
+/* line 93, ../scss/pages/_impact-activity-log.scss */
+.impact-filters-date-presets {
+  padding: 0 0 0 1.5em;
+  margin: 0;
+}
+
+/* line 98, ../scss/pages/_impact-activity-log.scss */
+.view-impact-log,
+.view-activity-log {
+  font-size: 14px;
+}
+/* line 101, ../scss/pages/_impact-activity-log.scss */
+.view-impact-log .view-header,
+.view-activity-log .view-header {
+  font-style: italic;
+  color: #777;
+  margin: 1em 0;
+}
+/* line 106, ../scss/pages/_impact-activity-log.scss */
+.view-impact-log .view-content,
+.view-activity-log .view-content {
+  width: 100%;
+  overflow-x: scroll;
+}
+/* line 109, ../scss/pages/_impact-activity-log.scss */
+.view-impact-log .view-content td,
+.view-activity-log .view-content td {
+  max-width: 200px;
+  padding: 0;
+}
+/* line 112, ../scss/pages/_impact-activity-log.scss */
+.view-impact-log .view-content td > div,
+.view-activity-log .view-content td > div {
+  padding: 8px;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+/* line 118, ../scss/pages/_impact-activity-log.scss */
+.view-impact-log .view-content td.views-field-title,
+.view-activity-log .view-content td.views-field-title {
+  max-width: 350px;
+}
+/* line 122, ../scss/pages/_impact-activity-log.scss */
+.view-impact-log .exposed_filter_data,
+.view-activity-log .exposed_filter_data {
+  border: none;
+  margin-bottom: 1em;
+  font-size: 16px;
+}
+/* line 127, ../scss/pages/_impact-activity-log.scss */
+.view-impact-log .form-type-checkbox,
+.view-activity-log .form-type-checkbox {
+  margin: 0;
+}
+
+/* line 134, ../scss/pages/_impact-activity-log.scss */
+.hide-timeline,
+.show-timeline {
+  display: none;
+}
+
+/* line 144, ../scss/pages/_impact-activity-log.scss */
+#timeline {
+  display: none;
+  min-height: 200px;
+  border: 1px solid #e7e7e7;
+  margin: 1em 0;
+  position: relative;
+}
+/* line 150, ../scss/pages/_impact-activity-log.scss */
+#timeline.loading {
+  background: url(../img/loading-large.gif) center no-repeat;
+  background-size: 83px;
+}
+/* line 154, ../scss/pages/_impact-activity-log.scss */
+#timeline .timeline-message {
+  display: none;
+  position: absolute;
+  top: 50%;
+  font-size: 22px;
+  font-weight: bold;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-top: -0.5em;
+}
+/* line 165, ../scss/pages/_impact-activity-log.scss */
+#timeline .day {
+  width: 28px;
+  display: inline-block;
+  border-left: 1px solid #e7e7e7;
+  position: relative;
+  padding: 45px 0 10px 0;
+  text-align: center;
+  box-sizing: content-box;
+  vertical-align: top;
+}
+/* line 175, ../scss/pages/_impact-activity-log.scss */
+#timeline .day:nth-child(odd) {
+  background: #f8f8f8;
+}
+/* line 178, ../scss/pages/_impact-activity-log.scss */
+#timeline .day:last-child {
+  border-right: 1px solid #e7e7e7;
+}
+/* line 181, ../scss/pages/_impact-activity-log.scss */
+#timeline .monthStart {
+  border-left: 6px solid #e7e7e7;
+}
+/* line 184, ../scss/pages/_impact-activity-log.scss */
+#timeline .monthLabel {
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  z-index: 1;
+  font-weight: bold;
+  font-size: 24px;
+}
+/* line 192, ../scss/pages/_impact-activity-log.scss */
+#timeline .dateLabel {
+  font-size: 14px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #e7e7e7;
+}
+/* line 197, ../scss/pages/_impact-activity-log.scss */
+#timeline .activities {
+  border-bottom: 1px solid #e7e7e7;
+  padding: 3px 0;
+}
+/* line 201, ../scss/pages/_impact-activity-log.scss */
+#timeline .activity {
+  color: #777;
+  display: block;
+  margin: 5px auto;
+  font-size: 26px;
+  line-height: 0.8;
+}
+/* line 207, ../scss/pages/_impact-activity-log.scss */
+#timeline .activity:hover {
+  color: #333;
+  text-decoration: none;
+}
+/* line 212, ../scss/pages/_impact-activity-log.scss */
+#timeline .node {
+  display: block;
+  margin-top: 5px;
+  cursor: pointer;
+  position: relative;
+  position: relative;
+  height: 20px;
+  font-size: 19px;
+}
+/* line 220, ../scss/pages/_impact-activity-log.scss */
+#timeline .node:before {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+}
+/* line 229, ../scss/pages/_impact-activity-log.scss */
+#timeline .icon-other:before {
+  font-size: 0.8em;
+  margin-top: 0.1em;
+}
+/* line 233, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-undefined {
+  color: #777;
+}
+/* line 235, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-undefined:hover {
+  color: #333;
+}
+/* line 239, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-0 {
+  color: #E54B4B;
+}
+/* line 241, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-0:hover {
+  color: #dd2020;
+}
+/* line 245, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-1 {
+  color: #E5C64B;
+}
+/* line 247, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-1:hover {
+  color: #ddb720;
+}
+/* line 251, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-2 {
+  color: #887FAA;
+}
+/* line 253, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-2:hover {
+  color: #6d6294;
+}
+/* line 257, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-3 {
+  color: #4178C6;
+}
+/* line 259, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-3:hover {
+  color: #3160a3;
+}
+/* line 263, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-4 {
+  color: #EB7B98;
+}
+/* line 265, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-4:hover {
+  color: #e44f75;
+}
+/* line 269, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-5 {
+  color: #82c440;
+}
+/* line 271, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-5:hover {
+  color: #69a031;
+}
+/* line 275, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-6 {
+  color: #84AEDF;
+}
+/* line 277, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-6:hover {
+  color: #5c93d4;
+}
+/* line 281, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-7 {
+  color: #E5894B;
+}
+/* line 283, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-7:hover {
+  color: #dd6c20;
+}
+/* line 287, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-8 {
+  color: #41C6BC;
+}
+/* line 289, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-8:hover {
+  color: #31a39a;
+}
+/* line 293, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-9 {
+  color: #9A41C6;
+}
+/* line 295, ../scss/pages/_impact-activity-log.scss */
+#timeline .topic-9:hover {
+  color: #7d31a3;
+}
+
+/* line 301, ../scss/pages/_impact-activity-log.scss */
+#timeline-chart {
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+/* line 306, ../scss/pages/_impact-activity-log.scss */
+#timeline-key {
+  display: none;
+  border-top: 1px solid #e7e7e7;
+  padding: 20px 0;
+}
+
+/* line 311, ../scss/pages/_impact-activity-log.scss */
+.timeline-key-section {
+  float: left;
+  margin-right: 20px;
+  padding: 0 20px;
+}
+/* line 315, ../scss/pages/_impact-activity-log.scss */
+.timeline-key-section h3 {
+  margin: 0 0 0.5em 0;
+}
+/* line 318, ../scss/pages/_impact-activity-log.scss */
+.timeline-key-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #777;
+}
+/* line 324, ../scss/pages/_impact-activity-log.scss */
+.timeline-key-section li + li {
+  margin-top: 0.25em;
+}
+/* line 327, ../scss/pages/_impact-activity-log.scss */
+.timeline-key-section + .timeline-key-section {
+  border-left: 1px solid #e7e7e7;
+}
+/* line 330, ../scss/pages/_impact-activity-log.scss */
+.timeline-key-section .icon-macro, .timeline-key-section .field-name-field-macro label, .field-name-field-macro .timeline-key-section label,
+.timeline-key-section .field-name-field-macro .field-label,
+.field-name-field-macro .timeline-key-section .field-label, .timeline-key-section .icon-meso, .timeline-key-section .field-name-field-meso label, .field-name-field-meso .timeline-key-section label,
+.timeline-key-section .field-name-field-meso .field-label,
+.field-name-field-meso .timeline-key-section .field-label, .timeline-key-section .icon-micro, .timeline-key-section .field-name-field-micro label, .field-name-field-micro .timeline-key-section label,
+.timeline-key-section .field-name-field-micro .field-label,
+.field-name-field-micro .timeline-key-section .field-label, .timeline-key-section .icon-media, .timeline-key-section .field-name-field-media label, .field-name-field-media .timeline-key-section label,
+.timeline-key-section .field-name-field-media .field-label,
+.field-name-field-media .timeline-key-section .field-label {
+  color: #333;
+}
+/* line 333, ../scss/pages/_impact-activity-log.scss */
+.timeline-key-section span {
+  padding-right: 0.5em;
+}
+
+/* line 338, ../scss/pages/_impact-activity-log.scss */
+.timeline-limit-warning {
+  display: none;
+  padding: 15px 20px;
+  color: #8a6d3b;
+  background: #fcf8e3;
+  border-bottom: 1px solid #faebcc;
+}
+
+/* line 347, ../scss/pages/_impact-activity-log.scss */
+.impact-log-actions button, .impact-log-actions .button {
+  margin-right: 1em;
+}
+
+/* line 4, ../scss/pages/_impact-activity-log-hide-fields.scss */
+.view-impact-log #edit-field-tags-tid-wrapper,
+.view-impact-log #edit-field-tags-code-for-africa-tid-wrapper,
+.view-impact-log #edit-field-tags-pri-tid-wrapper,
+.view-impact-log #edit-field-story-hechinger-tid-wrapper,
+.view-impact-log #edit-field-story-pri-tid-wrapper,
+.view-impact-log #edit-field-submitter-tid-wrapper,
+.view-activity-log #edit-field-tags-tid-wrapper,
+.view-activity-log #edit-field-tags-code-for-africa-tid-wrapper,
+.view-activity-log #edit-field-tags-pri-tid-wrapper,
+.view-activity-log #edit-field-story-hechinger-tid-wrapper,
+.view-activity-log #edit-field-story-pri-tid-wrapper,
+.view-activity-log #edit-field-submitter-tid-wrapper {
+  display: none;
+}
+
+/* line 17, ../scss/pages/_impact-activity-log-hide-fields.scss */
+.domain-cir-test-impact-tracker-org #edit-field-tags-tid-wrapper {
+  display: table-cell;
+}
+
+/* line 25, ../scss/pages/_impact-activity-log-hide-fields.scss */
+.domain-codeforafrica-impact-tracker-org #edit-field-tags-code-for-africa-tid-wrapper {
+  display: table-cell;
+}
+
+/* line 33, ../scss/pages/_impact-activity-log-hide-fields.scss */
+.domain-hechinger-test-impact-tracker-org .view-impact-log #edit-field-story-hechinger-tid-wrapper,
+.domain-hechinger-test-impact-tracker-org .view-impact-log #edit-field-submitter-tid-wrapper {
+  display: table-cell;
+}
+
+/* line 43, ../scss/pages/_impact-activity-log-hide-fields.scss */
+.domain-pri-impact-tracker-org .view-impact-log #edit-field-tags-pri-tid-wrapper,
+.domain-pri-impact-tracker-org .view-impact-log #edit-field-story-pri-tid-wrapper {
+  display: table-cell;
+}

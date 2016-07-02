@@ -1,0 +1,53 @@
+// menus
+
+.main-menu {
+  background: $light-background;
+  border-bottom: 1px solid $line-color;
+  padding: 0 10px;
+  .content {
+    //font-weight: bold;
+    line-height: 48px;
+    ul, li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      color: $light-text-color;
+      padding: 0 10px;
+      &:hover {
+        color: $light-text-color-hover;
+      }
+    }
+    li {
+      display: inline-block;
+    }
+  }
+  [class^="icon-"], [class*=" icon-"] {
+    &:before {
+      margin-right: 0.35em;
+    }
+  }
+}
+
+.region-menu-top-left {
+  float: left;
+  .content {
+    .first {
+      font-size: 20px;
+      font-weight: bold;
+      a {
+        color: $primary-text-color;
+        &:hover {
+          color: $primary-text-color-hover;
+        }
+      }
+    }
+  }
+}
+
+.region-menu-top-right {
+  float: right;
+}

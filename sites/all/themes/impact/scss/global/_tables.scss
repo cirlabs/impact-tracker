@@ -1,0 +1,44 @@
+.views-table {
+
+  border-right: 1px solid $line-color;
+  border-bottom: 1px solid $line-color;
+
+  tr {
+    border-top: 1px solid $line-color;
+    &:nth-child(even) {
+      background: $light-background;
+    }
+  }
+
+  td, th {
+    padding: 8px;
+    position: relative;
+    border-left: 1px solid $line-color;
+  }
+  td:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    background: url(../img/td-fade-white.png) right center repeat-y;
+  }
+
+  td.active {
+    background: none;
+  }
+
+  tr:nth-child(even) td:after {
+    background-image: url(../img/td-fade-gray.png);
+  }
+
+  th {
+    font-size: 16px;
+    &.active {
+      background: $light-background;
+    }
+  }
+
+}

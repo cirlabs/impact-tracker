@@ -1,0 +1,27 @@
+.node-type-outcome {
+  #page-title {
+    font-size: 24px;
+    margin-top: 1em;
+  }
+  .field {
+    margin-top: 1.5em;
+  }
+  .field-label {
+    margin-bottom: 0.25em;
+  }
+}
+
+
+.field-name-field-publications {
+  .field-collection-view {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  .field-item {
+    margin: 0 !important;
+  }
+  input.autocomplete-deluxe-form {
+    display: inline-block;
+  }
+}

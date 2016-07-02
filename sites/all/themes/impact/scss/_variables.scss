@@ -1,0 +1,18 @@
+$base-font-size: 16px;
+
+$accent-color: #337ab7;
+$accent-color-hover: darken($accent-color, 10%);
+
+$primary-text-color: #333;
+$primary-text-color-hover: darken($primary-text-color, 10%);
+
+$light-text-color: #777;
+$light-text-color-hover: $primary-text-color;
+
+$link-color: $accent-color;
+$link-color-hover: $accent-color-hover;
+
+$line-color: #e7e7e7;
+
+$light-background: #f8f8f8;
+$light-background-hover: darken(#f8f8f8, 3%);

@@ -1,0 +1,40 @@
+.page-node-add-outcome,
+.page-node-add-activity {
+  .field-name-field-publications {
+    td:first-child {
+      display: none;
+    }
+    td {
+      padding: 10px;
+    }
+    .form-type-checkbox {
+      width: 50%;
+      float: left;
+      margin: 0 0 0.5em 0;
+    }
+  }
+  .field-name-field-mediums,
+  .field-name-field-link {
+    margin-top: 0.8em;
+  }
+  .field-name-field-date {
+    label {
+      display: none;
+    }
+    .date-padding {
+      padding-left: 0 !important;
+    }
+  }
+  .field-name-field-story-partner {
+    .fieldset-wrapper {
+      background: #eee;
+      padding: 10px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      margin-top: 0.5em;
+    }
+    .form-item {
+      margin: 0;
+    }
+  }
+}

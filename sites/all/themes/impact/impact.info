@@ -1,0 +1,23 @@
+; Theme Info
+name = Impact
+description = Custom theme for Impact Tracker.
+core = 7.x
+engine = phptemplate
+
+; Stylesheets
+stylesheets[all][] = libraries/chosen/chosen.min.css
+stylesheets[all][] = css/styles.css
+
+; Scripts
+scripts[] = libraries/chosen/chosen.jquery.min.js
+scripts[] = js/scripts.js
+
+; Regions
+regions[menu_top_left] = Menu Top Left
+regions[menu_top_right] = Menu Top Right
+regions[content] = Content
+
+; Options
+features[] = favicon
+
+; Additional Options

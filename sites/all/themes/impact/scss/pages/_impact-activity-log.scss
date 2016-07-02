@@ -1,0 +1,350 @@
+.impact-filters-toggle {
+  margin: 0 0 20px 0;
+}
+.impact-filters {
+  display: none;
+  position: relative;
+  border: 1px solid $line-color;
+  background: $light-background;
+  padding: 20px 5px;
+  margin-bottom: 20px;
+  table {
+    vertical-align: top;
+    border: none;
+  }
+  tbody {
+    border: none;
+  }
+  td {
+    vertical-align: top;
+    padding: 3px;
+    width: 12.5%;
+  }
+  .views-widget {
+    border: 1px solid $line-color;
+    background: #fff;
+    border-radius: 3px;
+    padding: 10px 5px;
+    font-size: 14px;
+    height: 250px;
+    overflow: scroll;
+  }
+  .form-item {
+    margin: 0;
+    clear: left;
+  }
+  .bef-toggle {
+    display: block;
+  }
+  input[type="checkbox"] {
+    float: left;
+    display: block;
+    margin: 2px 0 0 0;
+  }
+  .form-type-bef-checkbox {
+    label {
+      display: block;
+      margin: 5px 0 0 1.25em;
+    }
+  }
+  .buttons {
+    text-align: right;
+    padding: 10px 10px 0 10px;
+  }
+  .views-submit-button,
+  .views-reset-button {
+    display: inline-block;
+    margin-left: 1em;
+    input {
+      font-size: 18px;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+    }
+  }
+  .views-widget-filter-field_date_value {
+    input {
+      width: 8em;
+    }
+    .description {
+      font-size: 12px;
+      margin-bottom: 1em;
+    }
+  }
+  // search field
+  #edit-title-wrapper {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+    padding: 0;
+    width: auto;
+    .views-widget {
+      height: auto;
+      border: none;
+      background: none;
+      padding: 0;
+    }
+    label {
+      float: left;
+      padding: 7px 10px 0 0;
+    }
+  }
+}
+
+.impact-filters-date-presets {
+  padding: 0 0 0 1.5em;
+  margin: 0;
+}
+
+.view-impact-log,
+.view-activity-log {
+  font-size: 14px;
+  .view-header {
+    font-style: italic;
+    color: $light-text-color;
+    margin: 1em 0;
+  }
+  .view-content {
+    width: 100%;
+    overflow-x: scroll;
+    td {
+      max-width: 200px;
+      padding: 0;
+      > div {
+        padding: 8px;
+        white-space: nowrap;
+        overflow-x: hidden;
+      }
+    }
+    td.views-field-title {
+      max-width: 350px;
+    }
+  }
+  .exposed_filter_data {
+    border: none;
+    margin-bottom: 1em;
+    font-size: 16px;
+  }
+  .form-type-checkbox {
+    margin: 0;
+  }
+}
+
+
+// chart buttons
+.hide-timeline,
+.show-timeline {
+  display: none;
+}
+
+
+// =========
+// timeline!
+// =========
+
+#timeline {
+  display: none;
+  min-height: 200px;
+  border: 1px solid $line-color;
+  margin: 1em 0;
+  position: relative;
+  &.loading {
+    background: url(../img/loading-large.gif) center no-repeat;
+    background-size: 83px;
+  }
+  .timeline-message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    font-size: 22px;
+    font-weight: bold;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: -0.5em;
+  }
+  .day {
+    width: 28px;
+    display: inline-block;
+    border-left: 1px solid $line-color;
+    position: relative;
+    padding: 45px 0 10px 0;
+    text-align: center;
+    box-sizing: content-box;
+    vertical-align: top;
+  }
+  .day:nth-child(odd) {
+    background: $light-background;
+  }
+  .day:last-child {
+    border-right: 1px solid $line-color;
+  }
+  .monthStart {
+    border-left: 6px solid $line-color;
+  }
+  .monthLabel {
+    position: absolute;
+    top: 8px;
+    left: 6px;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .dateLabel {
+    font-size: 14px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid $line-color;
+  }
+  .activities {
+    border-bottom: 1px solid $line-color;
+    padding: 3px 0;
+  }
+  .activity {
+    color: $light-text-color;
+    display: block;
+    margin: 5px auto;
+    font-size: 26px;
+    line-height: 0.8;
+    &:hover {
+      color: $light-text-color-hover;
+      text-decoration: none;
+    }
+  }
+  .node {
+    display: block;
+    margin-top: 5px;
+    cursor: pointer;
+    position: relative;
+    position: relative;
+    height: 20px;
+    font-size: 19px;
+    &:before {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      text-align: center;
+    }
+  }
+  .icon-other:before {
+    font-size: 0.8em;
+    margin-top: 0.1em;
+  }
+  .topic-undefined {
+    color: $light-text-color;
+    &:hover {
+      color: $light-text-color-hover;
+    }
+  }
+  .topic-0 {
+    color: #E54B4B;
+    &:hover {
+      color: darken(#E54B4B, 10%);
+    }
+  }
+  .topic-1 {
+    color: #E5C64B;
+    &:hover {
+      color: darken(#E5C64B, 10%);
+    }
+  }
+  .topic-2 {
+    color: #887FAA;
+    &:hover {
+      color: darken(#887FAA, 10%);
+    }
+  }
+  .topic-3 {
+    color: #4178C6;
+    &:hover {
+      color: darken(#4178C6, 10%);
+    }
+  }
+  .topic-4 {
+    color: #EB7B98;
+    &:hover {
+      color: darken(#EB7B98, 10%);
+    }
+  }
+  .topic-5 {
+    color: #82c440;
+    &:hover {
+      color: darken(#82c440, 10%);
+    }
+  }
+  .topic-6 {
+    color: #84AEDF;
+    &:hover {
+      color: darken(#84AEDF, 10%);
+    }
+  }
+  .topic-7 {
+    color: #E5894B;
+    &:hover {
+      color: darken(#E5894B, 10%);
+    }
+  }
+  .topic-8 {
+    color: #41C6BC;
+    &:hover {
+      color: darken(#41C6BC, 10%);
+    }
+  }
+  .topic-9 {
+    color: #9A41C6;
+    &:hover {
+      color: darken(#9A41C6, 10%);
+    }
+  }
+}
+
+#timeline-chart {
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+#timeline-key {
+  display: none;
+  border-top: 1px solid $line-color;
+  padding: 20px 0;
+}
+.timeline-key-section {
+  float: left;
+  margin-right: 20px;
+  padding: 0 20px;
+  h3 {
+    margin: 0 0 0.5em 0;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: $light-text-color;
+  }
+  li + li {
+    margin-top: 0.25em
+  }
+  + .timeline-key-section {
+    border-left: 1px solid $line-color;
+  }
+  .icon-macro, .icon-meso, .icon-micro, .icon-media {
+    color: $primary-text-color;
+  }
+  span {
+    padding-right: 0.5em;
+  }
+}
+
+.timeline-limit-warning {
+  display: none;
+  padding: 15px 20px;
+  color: #8a6d3b;
+  background: #fcf8e3;
+  border-bottom: 1px solid #faebcc
+}
+
+.impact-log-actions {
+  button, .button {
+    margin-right: 1em;
+  }
+}

@@ -1,0 +1,40 @@
+.field-name-field-media,
+.field-name-field-macro,
+.field-name-field-meso,
+.field-name-field-micro {
+  label,
+  .field-label {
+    @extend .iconify;
+    &:before {
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.field-name-field-media {
+  label,
+  .field-label {
+    @extend .icon-media;
+  }
+}
+
+.field-name-field-macro {
+  label,
+  .field-label {
+    @extend .icon-macro;
+  }
+}
+
+.field-name-field-meso {
+  label,
+  .field-label {
+    @extend .icon-meso;
+  }
+}
+
+.field-name-field-micro {
+  label,
+  .field-label {
+    @extend .icon-micro;
+  }
+}

@@ -1,36 +1,17 @@
-# Ignore configuration files that may contain sensitive information.
-sites/*/*settings*.php
+# ignore all files but the makefile
+/*
+!impact_tracker.make
 
-# Ignore paths that contain generated content.
-files/
+# ignore everything in sites directory except impact tracker theme
+!sites/
+sites/*
+!sites/all/
+sites/all/*
+!sites/all/themes/
+sites/all/themes/*
+!sites/all/themes/impact/
 
-# Ignore default text files
-robots.txt
-/CHANGELOG.txt
-/COPYRIGHT.txt
-/INSTALL*.txt
-/LICENSE.txt
-/MAINTAINERS.txt
-/UPGRADE.txt
-/README.txt
-/PATCHES.txt
-sites/README.txt
-sites/all/modules/README.txt
-sites/all/themes/README.txt
-
-# Ignore Drupal Files
-.htaccess
-web.config
-authorize.php
-cron.php
-index.php
-install.php
-update.php
-xmlrpc.php
-/includes
-/misc
-/modules
-/profiles
-/scripts
-/themes
-/sites
+# ignore everything in profiles directory except impact tracker profile
+!profiles/
+profiles/*
+!profiles/impact_tracker/
