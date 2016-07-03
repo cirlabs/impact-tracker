@@ -1,0 +1,108 @@
+; Packaging information for impact_tracker
+name = "Impact Tracker"
+description = ""
+exclusive = "1"
+core = "7.x"
+; ----------
+; Dependencies
+; ----------
+; Access control
+dependencies[] = node_view_permissions
+; Administration
+dependencies[] = admin_menu
+dependencies[] = admin_menu_toolbar
+; Chaos tool suite
+dependencies[] = ctools
+; Context
+dependencies[] = context
+dependencies[] = context_ui
+; Core
+dependencies[] = block
+dependencies[] = contextual
+dependencies[] = dblog
+dependencies[] = field
+dependencies[] = field_sql_storage
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = filter
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = node
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = php
+dependencies[] = rdf
+dependencies[] = search
+dependencies[] = system
+dependencies[] = taxonomy
+dependencies[] = text
+dependencies[] = update
+dependencies[] = user
+; Date/Time
+dependencies[] = date
+dependencies[] = date_api
+dependencies[] = date_popup
+dependencies[] = date_views
+; Development
+dependencies[] = profiler_builder
+; Features extra
+dependencies[] = fe_block
+; Feeds
+dependencies[] = feeds
+dependencies[] = feeds_ex
+dependencies[] = feeds_tamper
+dependencies[] = feeds_tamper_ui
+dependencies[] = feeds_ui
+dependencies[] = feeds_xls
+; Fields
+dependencies[] = entityreference
+dependencies[] = field_collection
+dependencies[] = field_permissions
+dependencies[] = filefield_sources
+dependencies[] = link
+; Link Badges
+dependencies[] = link_badges
+; Other
+dependencies[] = disable_term_node_listings
+dependencies[] = entity
+dependencies[] = entity_token
+dependencies[] = job_scheduler
+dependencies[] = menu_attributes
+dependencies[] = menu_badges
+dependencies[] = menu_item_visibility
+dependencies[] = menu_token
+dependencies[] = node_page_disable
+dependencies[] = pathauto
+dependencies[] = strongarm
+dependencies[] = title_length
+dependencies[] = token
+dependencies[] = views_term_path
+; Statistics
+dependencies[] = googleanalytics
+; Taxonomy
+dependencies[] = taxonomy_access_fix
+dependencies[] = term_merge
+; UUID
+dependencies[] = uuid
+; User interface
+dependencies[] = autocomplete_deluxe
+; Views
+dependencies[] = better_exposed_filters
+dependencies[] = editableviews
+dependencies[] = exposed_filter_data
+dependencies[] = views
+dependencies[] = views_bulk_operations
+dependencies[] = views_data_export
+dependencies[] = views_field_view
+dependencies[] = views_filters_selective
+dependencies[] = views_json
+dependencies[] = views_ui
+; Features
+dependencies[] = features
+dependencies[] = base_configuration
+dependencies[] = example_terms
+dependencies[] = outcomes
+dependencies[] = uuid_features
+

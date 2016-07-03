@@ -1,0 +1,13 @@
+name = Feeds XLS
+description = Excel file parser for importing excel data via feeds.module
+package = Feeds
+dependencies[] = feeds
+files[] = FeedsExcelParser.inc
+core = 7.x
+
+; Information added by Drupal.org packaging script on 2015-03-13
+version = "7.x-1.2"
+core = "7.x"
+project = "feeds_xls"
+datestamp = "1426241092"
+

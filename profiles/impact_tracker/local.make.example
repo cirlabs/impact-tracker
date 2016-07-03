@@ -1,0 +1,19 @@
+; impact_tracker make file for local development
+core = "7.x"
+api = "2"
+
+projects[drupal][version] = "7.x"
+; include the d.o. profile base
+includes[] = "drupal-org.make"
+
+; +++++ TODO modules without versions +++++
+
+projects[base_configuration][version] = "" ; TODO add version
+projects[base_configuration][subdir] = "custom"
+
+projects[example_terms][version] = "" ; TODO add version
+projects[example_terms][subdir] = "custom"
+
+projects[outcomes][version] = "" ; TODO add version
+projects[outcomes][subdir] = "custom"
+

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Content Management feature.
+ */
+
+include_once 'content_management.features.inc';

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Base Configuration feature.
+ */
+
+include_once 'base_configuration.features.inc';
