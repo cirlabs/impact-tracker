@@ -11,9 +11,6 @@ includes[] = "drupal-org.make"
 projects[base_configuration][version] = "" ; TODO add version
 projects[base_configuration][subdir] = "custom"
 
-projects[example_terms][version] = "" ; TODO add version
-projects[example_terms][subdir] = "custom"
-
 projects[outcomes][version] = "" ; TODO add version
 projects[outcomes][subdir] = "custom"
 

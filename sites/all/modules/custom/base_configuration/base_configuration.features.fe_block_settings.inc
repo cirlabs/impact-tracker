@@ -25,13 +25,13 @@ function base_configuration_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'impact',
-        'weight' => -8,
+        'weight' => 0,
       ),
       'seven' => array(
         'region' => 'content',
         'status' => 1,
         'theme' => 'seven',
-        'weight' => -10,
+        'weight' => 0,
       ),
     ),
     'title' => '',
@@ -48,10 +48,10 @@ function base_configuration_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'impact' => array(
-        'region' => 'menu_top_left',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'impact',
-        'weight' => -6,
+        'weight' => 0,
       ),
       'seven' => array(
         'region' => '',
@@ -60,7 +60,7 @@ function base_configuration_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => '<none>',
+    'title' => '',
     'visibility' => 0,
   );
 
@@ -69,32 +69,6 @@ function base_configuration_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 'user-menu',
     'module' => 'system',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'impact' => array(
-        'region' => 'menu_top_right',
-        'status' => 1,
-        'theme' => 'impact',
-        'weight' => -2,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '<none>',
-    'visibility' => 0,
-  );
-
-  $export['user-login'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'login',
-    'module' => 'user',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),
@@ -116,18 +90,18 @@ function base_configuration_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['views-impact_log-block_1'] = array(
+  $export['user-login'] = array(
     'cache' => -1,
     'custom' => 0,
-    'delta' => 'impact_log-block_1',
-    'module' => 'views',
+    'delta' => 'login',
+    'module' => 'user',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),
     'themes' => array(
       'impact' => array(
-        'region' => 'content',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'impact',
         'weight' => 0,
       ),

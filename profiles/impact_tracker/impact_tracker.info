@@ -102,7 +102,6 @@ dependencies[] = views_ui
 ; Features
 dependencies[] = features
 dependencies[] = base_configuration
-dependencies[] = example_terms
 dependencies[] = outcomes
 dependencies[] = uuid_features
 

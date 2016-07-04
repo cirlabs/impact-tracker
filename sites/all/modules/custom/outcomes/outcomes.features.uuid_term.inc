@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * example_terms.features.uuid_term.inc
+ * outcomes.features.uuid_term.inc
  */
 
 /**
  * Implements hook_uuid_features_default_terms().
  */
-function example_terms_uuid_features_default_terms() {
+function outcomes_uuid_features_default_terms() {
   $terms = array();
 
   $terms[] = array(
