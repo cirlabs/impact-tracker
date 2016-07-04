@@ -1084,7 +1084,7 @@ function outcomes_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_subtopics',
-    'label' => 'Campaign',
+    'label' => 'Subtopic',
     'options_limit' => FALSE,
     'options_limit_empty_behaviour' => 0,
     'options_limit_fields' => array(),
@@ -1171,7 +1171,7 @@ function outcomes_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_topics',
-    'label' => 'Driver of Change',
+    'label' => 'Topic',
     'options_limit' => FALSE,
     'options_limit_empty_behaviour' => 0,
     'options_limit_fields' => array(),
@@ -1192,10 +1192,8 @@ function outcomes_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Additional notes');
   t('Attachments');
-  t('Campaign');
   t('Date of Activity');
   t('Date of Impact');
-  t('Driver of Change');
   t('Link');
   t('Macro');
   t('Macro outcomes are those changes that happen at the level of an institution or power holder, resulting in structural change.');

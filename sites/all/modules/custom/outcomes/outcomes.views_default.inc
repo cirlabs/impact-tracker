@@ -799,7 +799,7 @@ print get_exposed_filter_output();
   $handler->display->display_options['fields']['title']['alter']['max_length'] = '25';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Date of Impact */
+  /* Field: Content: Date of Activity */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
@@ -844,13 +844,13 @@ print get_exposed_filter_output();
     'view_mode' => 'full',
   );
   $handler->display->display_options['fields']['field_publications']['delta_offset'] = '0';
-  /* Field: Content: Driver of Change */
+  /* Field: Content: Topic */
   $handler->display->display_options['fields']['field_topics']['id'] = 'field_topics';
   $handler->display->display_options['fields']['field_topics']['table'] = 'field_data_field_topics';
   $handler->display->display_options['fields']['field_topics']['field'] = 'field_topics';
   $handler->display->display_options['fields']['field_topics']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_topics']['delta_offset'] = '0';
-  /* Field: Content: Campaign */
+  /* Field: Content: Subtopic */
   $handler->display->display_options['fields']['field_subtopics']['id'] = 'field_subtopics';
   $handler->display->display_options['fields']['field_subtopics']['table'] = 'field_data_field_subtopics';
   $handler->display->display_options['fields']['field_subtopics']['field'] = 'field_subtopics';
@@ -863,7 +863,7 @@ print get_exposed_filter_output();
   $handler->display->display_options['fields']['field_tags']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_tags']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_tags']['delta_offset'] = '0';
-  /* Field: Content: Person entering */
+  /* Field: Content: Submitter */
   $handler->display->display_options['fields']['field_submitter']['id'] = 'field_submitter';
   $handler->display->display_options['fields']['field_submitter']['table'] = 'field_data_field_submitter';
   $handler->display->display_options['fields']['field_submitter']['field'] = 'field_submitter';
@@ -1001,7 +1001,7 @@ print get_exposed_filter_output();
   );
   $handler->display->display_options['filters']['field_micro_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_micro_tid']['vocabulary'] = 'micro';
-  /* Filter criterion: Content: Driver of Change (field_topics) */
+  /* Filter criterion: Content: Topic (field_topics) */
   $handler->display->display_options['filters']['field_topics_tid']['id'] = 'field_topics_tid';
   $handler->display->display_options['filters']['field_topics_tid']['table'] = 'field_data_field_topics';
   $handler->display->display_options['filters']['field_topics_tid']['field'] = 'field_topics_tid';
@@ -1020,7 +1020,7 @@ print get_exposed_filter_output();
   );
   $handler->display->display_options['filters']['field_topics_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_topics_tid']['vocabulary'] = 'topics';
-  /* Filter criterion: Content: Campaign (field_subtopics) */
+  /* Filter criterion: Content: Subtopic (field_subtopics) */
   $handler->display->display_options['filters']['field_subtopics_tid']['id'] = 'field_subtopics_tid';
   $handler->display->display_options['filters']['field_subtopics_tid']['table'] = 'field_data_field_subtopics';
   $handler->display->display_options['filters']['field_subtopics_tid']['field'] = 'field_subtopics_tid';
@@ -1039,7 +1039,7 @@ print get_exposed_filter_output();
   );
   $handler->display->display_options['filters']['field_subtopics_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_subtopics_tid']['vocabulary'] = 'subtopics';
-  /* Filter criterion: Content: Date of Impact (field_date) */
+  /* Filter criterion: Content: Date of Activity (field_date) */
   $handler->display->display_options['filters']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['filters']['field_date_value']['table'] = 'field_data_field_date';
   $handler->display->display_options['filters']['field_date_value']['field'] = 'field_date_value';
@@ -1078,7 +1078,7 @@ print get_exposed_filter_output();
   );
   $handler->display->display_options['filters']['field_tags_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
-  /* Filter criterion: Content: Person entering (field_submitter) */
+  /* Filter criterion: Content: Submitter (field_submitter) */
   $handler->display->display_options['filters']['field_submitter_tid']['id'] = 'field_submitter_tid';
   $handler->display->display_options['filters']['field_submitter_tid']['table'] = 'field_data_field_submitter';
   $handler->display->display_options['filters']['field_submitter_tid']['field'] = 'field_submitter_tid';
@@ -1303,7 +1303,7 @@ print get_exposed_filter_output();
   $handler->display->display_options['fields']['title']['alter']['max_length'] = '25';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Date of Impact */
+  /* Field: Content: Date of Activity */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
@@ -1347,14 +1347,14 @@ print get_exposed_filter_output();
     'view_mode' => 'full',
   );
   $handler->display->display_options['fields']['field_publications']['delta_offset'] = '0';
-  /* Field: Content: Driver of Change */
+  /* Field: Content: Topic */
   $handler->display->display_options['fields']['field_topics']['id'] = 'field_topics';
   $handler->display->display_options['fields']['field_topics']['table'] = 'field_data_field_topics';
   $handler->display->display_options['fields']['field_topics']['field'] = 'field_topics';
   $handler->display->display_options['fields']['field_topics']['label'] = 'Topics';
   $handler->display->display_options['fields']['field_topics']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_topics']['delta_offset'] = '0';
-  /* Field: Content: Campaign */
+  /* Field: Content: Subtopic */
   $handler->display->display_options['fields']['field_subtopics']['id'] = 'field_subtopics';
   $handler->display->display_options['fields']['field_subtopics']['table'] = 'field_data_field_subtopics';
   $handler->display->display_options['fields']['field_subtopics']['field'] = 'field_subtopics';
@@ -1437,7 +1437,7 @@ print get_exposed_filter_output();
   $handler->display->display_options['fields']['title']['alter']['max_length'] = '25';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Date of Impact */
+  /* Field: Content: Date of Activity */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
@@ -1481,14 +1481,14 @@ print get_exposed_filter_output();
     'view_mode' => 'full',
   );
   $handler->display->display_options['fields']['field_publications']['delta_offset'] = '0';
-  /* Field: Content: Driver of Change */
+  /* Field: Content: Topic */
   $handler->display->display_options['fields']['field_topics']['id'] = 'field_topics';
   $handler->display->display_options['fields']['field_topics']['table'] = 'field_data_field_topics';
   $handler->display->display_options['fields']['field_topics']['field'] = 'field_topics';
   $handler->display->display_options['fields']['field_topics']['label'] = 'Topics';
   $handler->display->display_options['fields']['field_topics']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_topics']['delta_offset'] = '0';
-  /* Field: Content: Campaign */
+  /* Field: Content: Subtopic */
   $handler->display->display_options['fields']['field_subtopics']['id'] = 'field_subtopics';
   $handler->display->display_options['fields']['field_subtopics']['table'] = 'field_data_field_subtopics';
   $handler->display->display_options['fields']['field_subtopics']['field'] = 'field_subtopics';
@@ -1596,7 +1596,7 @@ print get_exposed_filter_output();
   $handler->display->display_options['fields']['title']['alter']['max_length'] = '25';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Date of Impact */
+  /* Field: Content: Date of Activity */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
@@ -1629,7 +1629,7 @@ print get_exposed_filter_output();
   $handler->display->display_options['fields']['field_micro']['label'] = 'micro';
   $handler->display->display_options['fields']['field_micro']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_micro']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Driver of Change */
+  /* Field: Content: Topic */
   $handler->display->display_options['fields']['field_topics']['id'] = 'field_topics';
   $handler->display->display_options['fields']['field_topics']['table'] = 'field_data_field_topics';
   $handler->display->display_options['fields']['field_topics']['field'] = 'field_topics';
@@ -1645,7 +1645,7 @@ print get_exposed_filter_output();
   $handler->display->display_options['fields']['field_media']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_media']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Date of Impact (field_date) */
+  /* Sort criterion: Content: Date of Activity (field_date) */
   $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['sorts']['field_date_value']['table'] = 'field_data_field_date';
   $handler->display->display_options['sorts']['field_date_value']['field'] = 'field_date_value';

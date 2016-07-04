@@ -194,7 +194,7 @@ function outcomes_taxonomy_default_vocabularies() {
       ),
     ),
     'subtopics' => array(
-      'name' => 'Campaign',
+      'name' => 'Subtopics',
       'machine_name' => 'subtopics',
       'description' => '',
       'hierarchy' => 0,
@@ -240,7 +240,7 @@ function outcomes_taxonomy_default_vocabularies() {
       ),
     ),
     'topics' => array(
-      'name' => 'Driver of Change',
+      'name' => 'Topics',
       'machine_name' => 'topics',
       'description' => '',
       'hierarchy' => 0,
