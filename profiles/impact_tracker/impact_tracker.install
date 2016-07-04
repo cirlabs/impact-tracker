@@ -96,7 +96,6 @@ function impact_tracker_install() {
   // revert features to ensure they are all installed
   $features = array(
     'base_configuration',
-    'example_terms',
     'outcomes'
   );
   features_revert($features);
