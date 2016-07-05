@@ -34,14 +34,6 @@ function outcomes_views_api($module = NULL, $api = NULL) {
  */
 function outcomes_node_info() {
   $items = array(
-    'activity' => array(
-      'name' => t('Activity'),
-      'base' => 'node_content',
-      'description' => '',
-      'has_title' => '1',
-      'title_label' => t('Description'),
-      'help' => '',
-    ),
     'outcome' => array(
       'name' => t('Outcome'),
       'base' => 'node_content',
