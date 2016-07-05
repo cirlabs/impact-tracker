@@ -48,8 +48,8 @@ function base_configuration_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'impact' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'menu_top_left',
+        'status' => 1,
         'theme' => 'impact',
         'weight' => 0,
       ),
@@ -60,7 +60,7 @@ function base_configuration_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => '',
+    'title' => '<none>',
     'visibility' => 0,
   );
 
@@ -74,8 +74,8 @@ function base_configuration_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'impact' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'menu_top_right',
+        'status' => 1,
         'theme' => 'impact',
         'weight' => 0,
       ),
@@ -86,7 +86,7 @@ function base_configuration_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => '',
+    'title' => '<none>',
     'visibility' => 0,
   );
 
