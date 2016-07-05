@@ -9,29 +9,6 @@
  */
 function outcomes_taxonomy_default_vocabularies() {
   return array(
-    'activity_types' => array(
-      'name' => 'Activity Types',
-      'machine_name' => 'activity_types',
-      'description' => '',
-      'hierarchy' => 0,
-      'module' => 'taxonomy',
-      'weight' => 0,
-      'rdf_mapping' => array(
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'dc:title',
-          ),
-        ),
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-      ),
-    ),
     'macro' => array(
       'name' => 'Macro',
       'machine_name' => 'macro',

@@ -19,6 +19,12 @@ function base_configuration_user_default_roles() {
   // Exported role: developer.
   $roles['developer'] = array(
     'name' => 'developer',
+    'weight' => 4,
+  );
+
+  // Exported role: editor.
+  $roles['editor'] = array(
+    'name' => 'editor',
     'weight' => 2,
   );
 

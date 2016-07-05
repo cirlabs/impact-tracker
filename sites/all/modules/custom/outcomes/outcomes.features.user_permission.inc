@@ -109,6 +109,7 @@ function outcomes_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'developer' => 'developer',
+      'editor' => 'editor',
     ),
     'module' => 'field_permissions',
   );
@@ -128,6 +129,7 @@ function outcomes_user_default_permissions() {
     'name' => 'delete any outcome content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -137,6 +139,7 @@ function outcomes_user_default_permissions() {
     'name' => 'delete own outcome content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -236,6 +239,7 @@ function outcomes_user_default_permissions() {
     'name' => 'edit any outcome content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -246,6 +250,7 @@ function outcomes_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'developer' => 'developer',
+      'editor' => 'editor',
     ),
     'module' => 'field_permissions',
   );
@@ -256,6 +261,7 @@ function outcomes_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'developer' => 'developer',
+      'editor' => 'editor',
     ),
     'module' => 'field_permissions',
   );
@@ -265,6 +271,7 @@ function outcomes_user_default_permissions() {
     'name' => 'edit own outcome content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -376,6 +383,7 @@ function outcomes_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'developer' => 'developer',
+      'editor' => 'editor',
     ),
     'module' => 'field_permissions',
   );
@@ -386,6 +394,7 @@ function outcomes_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'developer' => 'developer',
+      'editor' => 'editor',
     ),
     'module' => 'field_permissions',
   );

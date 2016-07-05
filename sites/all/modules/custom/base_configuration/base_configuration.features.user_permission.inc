@@ -16,6 +16,7 @@ function base_configuration_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'developer' => 'developer',
+      'editor' => 'editor',
     ),
     'module' => 'admin_menu',
   );
@@ -55,6 +56,7 @@ function base_configuration_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'developer' => 'developer',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
