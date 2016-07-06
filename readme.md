@@ -1,3 +1,9 @@
 # Impact Tracker
 
-Documentation to come.
+The Impact Tracker is built with Drupal. This repository is not a complete Drupal setup, but it does contain everything you will need to install Drupal and all necessary dependencies.
+
+- Clone or download this repository.
+- Use [Drush](http://docs.drush.org/en/master/install/) to install Drupal and other dependencies by running the command `drush make impact_tracker.make`.
+- [Install Drupal](https://www.drupal.org/documentation/install/beginners) as normal.
+- Use the Impact Tracker installation profile, which will automatically enable required modules and handle most of the site configuration.
+- We use the [Features](https://www.drupal.org/project/features) module to manage most Impact Tracker functionality. The custom features do not always enable properly when the site is installed. Once you have setup the site and logged in, go to Admin > Structure > Features. If either the *Base Configuration* or *Outcomes* features are marked as *Overridden*, you'll need to re-enable them. Click on the *Overridden* link for the feature, check off any components marked as *Overridden*, and click the *Revert Components* button at the bottom of the page.
