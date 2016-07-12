@@ -153,14 +153,6 @@ function outcomes_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => 'Screening',
-    'description' => '',
-    'format' => 'filtered_html',
-    'weight' => 0,
-    'uuid' => '6b0e0fac-6b7d-409c-b230-08bdc0eb38d8',
-    'vocabulary_machine_name' => 'meso',
-  );
-  $terms[] = array(
     'name' => 'Mention / Citation',
     'description' => '',
     'format' => 'filtered_html',
