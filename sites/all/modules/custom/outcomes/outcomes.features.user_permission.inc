@@ -74,15 +74,6 @@ function outcomes_user_default_permissions() {
     'module' => 'taxonomy_access_fix',
   );
 
-  // Exported permission: 'add terms in subtopics'.
-  $permissions['add terms in subtopics'] = array(
-    'name' => 'add terms in subtopics',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'taxonomy_access_fix',
-  );
-
   // Exported permission: 'add terms in tags'.
   $permissions['add terms in tags'] = array(
     'name' => 'add terms in tags',
@@ -207,15 +198,6 @@ function outcomes_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'delete terms in subtopics'.
-  $permissions['delete terms in subtopics'] = array(
-    'name' => 'delete terms in subtopics',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: 'delete terms in tags'.
   $permissions['delete terms in tags'] = array(
     'name' => 'delete terms in tags',
@@ -333,15 +315,6 @@ function outcomes_user_default_permissions() {
   // Exported permission: 'edit terms in submitters'.
   $permissions['edit terms in submitters'] = array(
     'name' => 'edit terms in submitters',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: 'edit terms in subtopics'.
-  $permissions['edit terms in subtopics'] = array(
-    'name' => 'edit terms in subtopics',
     'roles' => array(
       'administrator' => 'administrator',
     ),

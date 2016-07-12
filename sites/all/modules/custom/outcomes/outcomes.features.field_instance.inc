@@ -585,86 +585,6 @@ function outcomes_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-outcome-field_submitter'.
-  $field_instances['node-outcome-field_submitter'] = array(
-    'bundle' => 'outcome',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 20,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_submitter',
-    'label' => 'Person entering',
-    'options_limit' => FALSE,
-    'options_limit_empty_behaviour' => 0,
-    'options_limit_fields' => array(),
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 14,
-    ),
-  );
-
-  // Exported field_instance: 'node-outcome-field_subtopics'.
-  $field_instances['node-outcome-field_subtopics'] = array(
-    'bundle' => 'outcome',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 8,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_subtopics',
-    'label' => 'Subtopic',
-    'options_limit' => FALSE,
-    'options_limit_empty_behaviour' => 0,
-    'options_limit_fields' => array(),
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 9,
-    ),
-  );
-
   // Exported field_instance: 'node-outcome-field_tags'.
   $field_instances['node-outcome-field_tags'] = array(
     'bundle' => 'outcome',
@@ -766,11 +686,9 @@ function outcomes_field_default_field_instances() {
   t('Meso outcomes are those changes that happen at the level of a group.');
   t('Micro');
   t('Micro changes are those that happen at the level of an individual.');
-  t('Person entering');
   t('Publication');
   t('Publications');
   t('Reviewed');
-  t('Subtopic');
   t('Tags');
   t('Topic');
 
