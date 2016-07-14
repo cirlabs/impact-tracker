@@ -850,11 +850,6 @@ print get_exposed_filter_output();
   $handler->display->display_options['fields']['field_topics']['field'] = 'field_topics';
   $handler->display->display_options['fields']['field_topics']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_topics']['delta_offset'] = '0';
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_subtopics']['id'] = 'field_subtopics';
-  $handler->display->display_options['fields']['field_subtopics']['table'] = 'field_data_field_subtopics';
-  $handler->display->display_options['fields']['field_subtopics']['field'] = 'field_subtopics';
-  $handler->display->display_options['fields']['field_subtopics']['hide_empty'] = TRUE;
   /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
@@ -862,10 +857,6 @@ print get_exposed_filter_output();
   $handler->display->display_options['fields']['field_tags']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_tags']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_tags']['delta_offset'] = '0';
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_submitter']['id'] = 'field_submitter';
-  $handler->display->display_options['fields']['field_submitter']['table'] = 'field_data_field_submitter';
-  $handler->display->display_options['fields']['field_submitter']['field'] = 'field_submitter';
   /* Field: Content: Attachments */
   $handler->display->display_options['fields']['field_attachments']['id'] = 'field_attachments';
   $handler->display->display_options['fields']['field_attachments']['table'] = 'field_data_field_attachments';
@@ -1018,23 +1009,6 @@ print get_exposed_filter_output();
   );
   $handler->display->display_options['filters']['field_topics_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_topics_tid']['vocabulary'] = 'topics';
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['field_subtopics_tid']['id'] = 'field_subtopics_tid';
-  $handler->display->display_options['filters']['field_subtopics_tid']['table'] = 'field_data_field_subtopics';
-  $handler->display->display_options['filters']['field_subtopics_tid']['field'] = 'field_subtopics_tid';
-  $handler->display->display_options['filters']['field_subtopics_tid']['group'] = 1;
-  $handler->display->display_options['filters']['field_subtopics_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_subtopics_tid']['expose']['operator_id'] = 'field_subtopics_tid_op';
-  $handler->display->display_options['filters']['field_subtopics_tid']['expose']['label'] = 'Campaign';
-  $handler->display->display_options['filters']['field_subtopics_tid']['expose']['operator'] = 'field_subtopics_tid_op';
-  $handler->display->display_options['filters']['field_subtopics_tid']['expose']['identifier'] = 'field_subtopics_tid';
-  $handler->display->display_options['filters']['field_subtopics_tid']['expose']['multiple'] = TRUE;
-  $handler->display->display_options['filters']['field_subtopics_tid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    4 => 0,
-    3 => 0,
-  );
   /* Filter criterion: Content: Date of Impact (field_date) */
   $handler->display->display_options['filters']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['filters']['field_date_value']['table'] = 'field_data_field_date';
@@ -1074,23 +1048,6 @@ print get_exposed_filter_output();
   );
   $handler->display->display_options['filters']['field_tags_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['field_submitter_tid']['id'] = 'field_submitter_tid';
-  $handler->display->display_options['filters']['field_submitter_tid']['table'] = 'field_data_field_submitter';
-  $handler->display->display_options['filters']['field_submitter_tid']['field'] = 'field_submitter_tid';
-  $handler->display->display_options['filters']['field_submitter_tid']['group'] = 1;
-  $handler->display->display_options['filters']['field_submitter_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_submitter_tid']['expose']['operator_id'] = 'field_submitter_tid_op';
-  $handler->display->display_options['filters']['field_submitter_tid']['expose']['label'] = 'Person entering';
-  $handler->display->display_options['filters']['field_submitter_tid']['expose']['operator'] = 'field_submitter_tid_op';
-  $handler->display->display_options['filters']['field_submitter_tid']['expose']['identifier'] = 'field_submitter_tid';
-  $handler->display->display_options['filters']['field_submitter_tid']['expose']['multiple'] = TRUE;
-  $handler->display->display_options['filters']['field_submitter_tid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    4 => 0,
-    3 => 0,
-  );
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
@@ -1405,7 +1362,8 @@ print get_exposed_filter_output();
 
   /* Display: Excel Export */
   $handler = $view->new_display('views_data_export', 'Excel Export', 'views_data_export_2');
-  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'views_data_export_xls';
   $handler->display->display_options['style_options']['provide_file'] = 1;
   $handler->display->display_options['style_options']['parent_sort'] = 0;
