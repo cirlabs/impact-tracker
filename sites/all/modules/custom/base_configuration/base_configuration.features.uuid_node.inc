@@ -29,13 +29,13 @@ function base_configuration_uuid_features_default_content() {
   'body' => array(
     'und' => array(
       0 => array(
-        'value' => '<a href="/node/add/outcome" class="home-add-outcome">
+        'value' => '<a href="node/add/outcome" class="home-add-outcome">
   <span class="icon-macro"></span> <span class="icon-meso"></span> <span class="icon-micro"></span> <span class="icon-media"></span>
   <h1>Submit Outcome</h1>
 </a>',
         'summary' => '',
         'format' => 'full_html',
-        'safe_value' => '<a href="/node/add/outcome" class="home-add-outcome">
+        'safe_value' => '<a href="node/add/outcome" class="home-add-outcome">
   <span class="icon-macro"></span> <span class="icon-meso"></span> <span class="icon-micro"></span> <span class="icon-media"></span>
   <h1>Submit Outcome</h1>
 </a>',
