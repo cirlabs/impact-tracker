@@ -1,0 +1,4 @@
+name = Disable Tags Field
+description = Removes the Tags field from the Outcome submission form.
+core = 7.x
+package = Custom

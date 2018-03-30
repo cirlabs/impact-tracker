@@ -4,7 +4,7 @@
  * Basic template file
  */
 ?>
-<?php if ($exposed_filters): ?>
+<?php if (isset($exposed_filters)): ?>
   <div class="exposed_filter_data"><strong>Filters Applied: </strong>
 
   <?php $filters_applied = array(); ?>

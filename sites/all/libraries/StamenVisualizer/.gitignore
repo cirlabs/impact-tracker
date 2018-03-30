@@ -1,0 +1,9 @@
+# dependencies
+node_modules
+
+# misc
+*.log
+.env
+.DS_Store
+*.zip
+*.swp

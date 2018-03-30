@@ -1,0 +1,7 @@
+<?php
+
+function disable_tags_field_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'outcome_node_form') {
+    $form['field_tags']['#access'] = 0;
+  }
+}

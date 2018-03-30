@@ -26,6 +26,9 @@ input[type="checkbox"] {
 
 select {
   height: 36px;
+  &[multiple="multiple"] {
+    height: auto;
+  }
 }
 
 label,

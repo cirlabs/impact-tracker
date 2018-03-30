@@ -11,6 +11,33 @@ includes[] = "drupal-org.make"
 projects[base_configuration][version] = "" ; TODO add version
 projects[base_configuration][subdir] = "custom"
 
+projects[content_management][version] = "" ; TODO add version
+projects[content_management][subdir] = "custom"
+
+projects[disable_author_field][version] = "" ; TODO add version
+projects[disable_author_field][subdir] = "custom"
+
+projects[disable_grant_field][version] = "" ; TODO add version
+projects[disable_grant_field][subdir] = "custom"
+
+projects[disable_platform_field][version] = "" ; TODO add version
+projects[disable_platform_field][subdir] = "custom"
+
+projects[disable_story_field][version] = "" ; TODO add version
+projects[disable_story_field][subdir] = "custom"
+
+projects[disable_story_link_field][version] = "" ; TODO add version
+projects[disable_story_link_field][subdir] = "custom"
+
+projects[disable_story_partner_field][version] = "" ; TODO add version
+projects[disable_story_partner_field][subdir] = "custom"
+
+projects[disable_submitter_field][version] = "" ; TODO add version
+projects[disable_submitter_field][subdir] = "custom"
+
+projects[impact_tracker_ga][version] = "" ; TODO add version
+projects[impact_tracker_ga][subdir] = "custom"
+
 projects[outcomes][version] = "" ; TODO add version
 projects[outcomes][subdir] = "custom"
 

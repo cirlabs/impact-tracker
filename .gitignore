@@ -2,7 +2,7 @@
 /*
 !impact_tracker.make
 
-# ignore everything in sites directory except impact tracker theme and custom modules
+# ignore everything in sites directory except impact tracker theme, custom modules, and libraries
 !sites/
 sites/*
 !sites/all/
@@ -13,6 +13,7 @@ sites/all/themes/*
 !sites/all/modules/
 sites/all/modules/*
 !sites/all/modules/custom/
+!sites/all/libraries/
 
 # keep PHPExcel library for Feeds XLS module
 !sites/all/modules/feeds_xls/

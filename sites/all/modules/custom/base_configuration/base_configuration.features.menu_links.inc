@@ -33,13 +33,15 @@ function base_configuration_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
     'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
   );
-  // Exported menu link: main-menu_review-submission:review.
-  $menu_links['main-menu_review-submission:review'] = array(
+  // Exported menu link: main-menu_review-submissions:review.
+  $menu_links['main-menu_review-submissions:review'] = array(
     'menu_name' => 'main-menu',
     'link_path' => 'review',
     'router_path' => 'review',
-    'link_title' => 'Review Submission',
+    'link_title' => 'Review Submissions',
     'options' => array(
       'alter' => TRUE,
       'link_badge' => array(
@@ -50,7 +52,7 @@ function base_configuration_menu_default_menu_links() {
         ),
         'key' => 'views_review_submissions_menu_bage_menu_badge_1',
       ),
-      'identifier' => 'main-menu_review-submission:review',
+      'identifier' => 'main-menu_review-submissions:review',
       'attributes' => array(),
       'item_attributes' => array(
         'id' => '',
@@ -65,6 +67,8 @@ function base_configuration_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 20,
     'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
   );
   // Exported menu link: main-menu_sitename:menutoken/55f601fa6d9f0.
   $menu_links['main-menu_sitename:menutoken/55f601fa6d9f0'] = array(
@@ -94,6 +98,8 @@ function base_configuration_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -50,
     'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
   );
   // Exported menu link: user-menu_account:user.
   $menu_links['user-menu_account:user'] = array(
@@ -122,6 +128,8 @@ function base_configuration_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => -49,
     'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
   );
   // Exported menu link: user-menu_log-out:user/logout.
   $menu_links['user-menu_log-out:user/logout'] = array(
@@ -140,6 +148,8 @@ function base_configuration_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 10,
     'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
   );
   // Exported menu link: user-menu_login:user/login.
   $menu_links['user-menu_login:user/login'] = array(
@@ -168,6 +178,8 @@ function base_configuration_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -50,
     'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
   );
   // Exported menu link: user-menu_logout:user/logout.
   $menu_links['user-menu_logout:user/logout'] = array(
@@ -196,6 +208,28 @@ function base_configuration_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -48,
     'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+  );
+  // Exported menu link: user-menu_user-account:user.
+  $menu_links['user-menu_user-account:user'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'user',
+    'router_path' => 'user',
+    'link_title' => 'User account',
+    'options' => array(
+      'alter' => TRUE,
+      'identifier' => 'user-menu_user-account:user',
+    ),
+    'module' => 'system',
+    'hidden' => 1,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -10,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
   );
 
   // Translatables
@@ -205,7 +239,8 @@ function base_configuration_menu_default_menu_links() {
   t('Log out');
   t('Login');
   t('Logout');
-  t('Review Submission');
+  t('Review Submissions');
+  t('User account');
   t('[site:name]');
 
   return $menu_links;

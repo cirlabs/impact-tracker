@@ -1,0 +1,4 @@
+name = Disable Story Field
+description = Removes the Story field from the Outcome submission form.
+core = 7.x
+package = Custom

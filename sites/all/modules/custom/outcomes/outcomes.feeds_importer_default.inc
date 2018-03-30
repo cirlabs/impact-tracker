@@ -20,7 +20,7 @@ function outcomes_feeds_importer_default() {
     'fetcher' => array(
       'plugin_key' => 'FeedsFileFetcher',
       'config' => array(
-        'allowed_extensions' => 'xls xlsx',
+        'allowed_extensions' => 'csv',
         'direct' => 0,
         'directory' => 'public://feeds',
         'allowed_schemes' => array(
@@ -29,10 +29,10 @@ function outcomes_feeds_importer_default() {
       ),
     ),
     'parser' => array(
-      'plugin_key' => 'FeedsExcelParser',
+      'plugin_key' => 'FeedsCSVParser',
       'config' => array(
-        'all_worksheets' => 0,
-        'max_rows' => 65535,
+        'delimiter' => ',',
+        'no_headers' => 0,
       ),
     ),
     'processor' => array(
@@ -43,60 +43,58 @@ function outcomes_feeds_importer_default() {
         'authorize' => 1,
         'mappings' => array(
           0 => array(
-            'source' => 'Media',
-            'target' => 'field_media',
-            'term_search' => '0',
-            'autocreate' => 1,
-          ),
-          1 => array(
-            'source' => 'Description',
+            'source' => 'Title',
             'target' => 'title',
             'unique' => FALSE,
           ),
-          2 => array(
-            'source' => 'Date',
-            'target' => 'field_date:start',
-            'unique' => FALSE,
-          ),
-          3 => array(
-            'source' => 'Topic',
-            'target' => 'field_topics',
-            'term_search' => '0',
-            'autocreate' => 1,
-          ),
-          4 => array(
+          1 => array(
             'source' => 'Additional notes',
             'target' => 'field_additional_notes',
             'unique' => FALSE,
           ),
-          5 => array(
-            'source' => 'Tags',
-            'target' => 'field_tags',
-            'term_search' => '0',
-            'autocreate' => 1,
+          2 => array(
+            'source' => 'Attachments',
+            'target' => 'field_attachments:uri',
+            'unique' => FALSE,
           ),
-          6 => array(
-            'source' => 'id',
-            'target' => 'guid',
-            'unique' => 1,
+          3 => array(
+            'source' => 'Date',
+            'target' => 'field_date:start',
+            'unique' => FALSE,
           ),
-          7 => array(
+          4 => array(
             'source' => 'Macro',
             'target' => 'field_macro',
             'term_search' => '0',
             'autocreate' => 1,
           ),
-          8 => array(
+          5 => array(
+            'source' => 'Media',
+            'target' => 'field_media',
+            'term_search' => '0',
+            'autocreate' => 1,
+          ),
+          6 => array(
             'source' => 'Meso',
             'target' => 'field_meso',
             'term_search' => '0',
             'autocreate' => 1,
           ),
-          9 => array(
+          7 => array(
             'source' => 'Micro',
             'target' => 'field_micro',
             'term_search' => '0',
             'autocreate' => 1,
+          ),
+          8 => array(
+            'source' => 'Node UUID',
+            'target' => 'guid',
+            'unique' => 1,
+          ),
+          9 => array(
+            'source' => 'Reviewed',
+            'target' => 'field_reviewed',
+            'unique' => FALSE,
           ),
           10 => array(
             'source' => 'Subtopic',
@@ -105,40 +103,86 @@ function outcomes_feeds_importer_default() {
             'autocreate' => 1,
           ),
           11 => array(
-            'source' => 'Publication',
-            'target' => 'field_temp_publications',
-            'unique' => FALSE,
+            'source' => 'Tags',
+            'target' => 'field_tags',
+            'term_search' => '0',
+            'autocreate' => 1,
           ),
           12 => array(
-            'source' => 'Other publication',
-            'target' => 'field_temp_other_publications',
-            'unique' => FALSE,
+            'source' => 'Topic',
+            'target' => 'field_topics',
+            'term_search' => '0',
+            'autocreate' => 1,
           ),
           13 => array(
-            'source' => 'Link',
-            'target' => 'field_temp_link',
+            'source' => 'Publication Link',
+            'target' => 'field_publications:field_link:url',
             'unique' => FALSE,
           ),
           14 => array(
-            'source' => 'Attachment',
-            'target' => 'field_temp_attachments',
-            'unique' => FALSE,
+            'source' => 'Publication Medium',
+            'target' => 'field_publications:field_mediums',
+            'term_search' => '0',
+            'autocreate' => 1,
           ),
           15 => array(
-            'source' => 'Created on',
-            'target' => 'created',
-            'unique' => FALSE,
+            'source' => 'Publication',
+            'target' => 'field_publications:field_publication',
+            'term_search' => '0',
+            'autocreate' => 1,
           ),
           16 => array(
-            'source' => 'Medium',
-            'target' => 'field_temp_mediums',
+            'source' => 'Story Link',
+            'target' => 'field_story_link:url',
             'unique' => FALSE,
+          ),
+          17 => array(
+            'source' => 'Story',
+            'target' => 'field_story',
+            'term_search' => '0',
+            'autocreate' => 1,
+          ),
+          18 => array(
+            'source' => 'Story Partner Link',
+            'target' => 'field_story_partner:field_link:url',
+            'unique' => FALSE,
+          ),
+          19 => array(
+            'source' => 'Story Partner Publication',
+            'target' => 'field_story_partner:field_publication',
+            'term_search' => '0',
+            'autocreate' => 1,
+          ),
+          20 => array(
+            'source' => 'Grant',
+            'target' => 'field_grant',
+            'term_search' => '0',
+            'autocreate' => 1,
+          ),
+          21 => array(
+            'source' => 'Submitter',
+            'target' => 'field_submitter',
+            'term_search' => '0',
+            'autocreate' => 1,
+          ),
+          22 => array(
+            'source' => 'Author',
+            'target' => 'field_author',
+            'term_search' => '0',
+            'autocreate' => 1,
+          ),
+          23 => array(
+            'source' => 'Platform',
+            'target' => 'field_platform',
+            'term_search' => '0',
+            'autocreate' => 1,
           ),
         ),
         'update_existing' => '2',
         'input_format' => 'plain_text',
         'skip_hash_check' => 0,
         'bundle' => 'outcome',
+        'update_non_existent' => 'skip',
       ),
     ),
     'content_type' => '',

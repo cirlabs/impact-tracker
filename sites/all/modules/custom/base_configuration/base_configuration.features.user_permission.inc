@@ -70,6 +70,17 @@ function base_configuration_user_default_permissions() {
     'module' => 'contextual',
   );
 
+  // Exported permission: 'access notify'.
+  $permissions['access notify'] = array(
+    'name' => 'access notify',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+      'editor' => 'editor',
+    ),
+    'module' => 'notify',
+  );
+
   // Exported permission: 'access private fields'.
   $permissions['access private fields'] = array(
     'name' => 'access private fields',
@@ -83,6 +94,7 @@ function base_configuration_user_default_permissions() {
   $permissions['access site in maintenance mode'] = array(
     'name' => 'access site in maintenance mode',
     'roles' => array(
+      'administrator' => 'administrator',
       'developer' => 'developer',
     ),
     'module' => 'system',
@@ -123,6 +135,15 @@ function base_configuration_user_default_permissions() {
       'developer' => 'developer',
     ),
     'module' => 'block',
+  );
+
+  // Exported permission: 'administer content translations'.
+  $permissions['administer content translations'] = array(
+    'name' => 'administer content translations',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'i18n_node',
   );
 
   // Exported permission: 'administer content types'.
@@ -216,6 +237,15 @@ function base_configuration_user_default_permissions() {
     'module' => 'image',
   );
 
+  // Exported permission: 'administer languages'.
+  $permissions['administer languages'] = array(
+    'name' => 'administer languages',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'locale',
+  );
+
   // Exported permission: 'administer menu'.
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
@@ -270,6 +300,24 @@ function base_configuration_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'administer notify'.
+  $permissions['administer notify'] = array(
+    'name' => 'administer notify',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'notify',
+  );
+
+  // Exported permission: 'administer notify queue'.
+  $permissions['administer notify queue'] = array(
+    'name' => 'administer notify queue',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'notify',
+  );
+
   // Exported permission: 'administer pathauto'.
   $permissions['administer pathauto'] = array(
     'name' => 'administer pathauto',
@@ -283,6 +331,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
     'roles' => array(
+      'administrator' => 'administrator',
       'developer' => 'developer',
     ),
     'module' => 'user',
@@ -497,6 +546,7 @@ function base_configuration_user_default_permissions() {
   $permissions['flush caches'] = array(
     'name' => 'flush caches',
     'roles' => array(
+      'administrator' => 'administrator',
       'developer' => 'developer',
     ),
     'module' => 'admin_menu',
@@ -548,6 +598,51 @@ function base_configuration_user_default_permissions() {
     'module' => 'googleanalytics',
   );
 
+  // Exported permission: 'publish any content'.
+  $permissions['publish any content'] = array(
+    'name' => 'publish any content',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish any outcome content'.
+  $permissions['publish any outcome content'] = array(
+    'name' => 'publish any outcome content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish editable content'.
+  $permissions['publish editable content'] = array(
+    'name' => 'publish editable content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish editable outcome content'.
+  $permissions['publish editable outcome content'] = array(
+    'name' => 'publish editable outcome content',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish own outcome content'.
+  $permissions['publish own outcome content'] = array(
+    'name' => 'publish own outcome content',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'publishcontent',
+  );
+
   // Exported permission: 'rename features'.
   $permissions['rename features'] = array(
     'name' => 'rename features',
@@ -581,6 +676,81 @@ function base_configuration_user_default_permissions() {
       'developer' => 'developer',
     ),
     'module' => 'user',
+  );
+
+  // Exported permission: 'translate admin strings'.
+  $permissions['translate admin strings'] = array(
+    'name' => 'translate admin strings',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'i18n_string',
+  );
+
+  // Exported permission: 'translate content'.
+  $permissions['translate content'] = array(
+    'name' => 'translate content',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'translation',
+  );
+
+  // Exported permission: 'translate interface'.
+  $permissions['translate interface'] = array(
+    'name' => 'translate interface',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'locale',
+  );
+
+  // Exported permission: 'translate user-defined strings'.
+  $permissions['translate user-defined strings'] = array(
+    'name' => 'translate user-defined strings',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'i18n_string',
+  );
+
+  // Exported permission: 'unpublish any content'.
+  $permissions['unpublish any content'] = array(
+    'name' => 'unpublish any content',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish any outcome content'.
+  $permissions['unpublish any outcome content'] = array(
+    'name' => 'unpublish any outcome content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish editable content'.
+  $permissions['unpublish editable content'] = array(
+    'name' => 'unpublish editable content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish editable outcome content'.
+  $permissions['unpublish editable outcome content'] = array(
+    'name' => 'unpublish editable outcome content',
+    'roles' => array(),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish own outcome content'.
+  $permissions['unpublish own outcome content'] = array(
+    'name' => 'unpublish own outcome content',
+    'roles' => array(),
+    'module' => 'publishcontent',
   );
 
   // Exported permission: 'use PHP for settings'.

@@ -1,0 +1,4 @@
+name = Disable Subtopics Field
+description = Removes the Subtopics field from the Outcome submission form.
+core = 7.x
+package = Custom

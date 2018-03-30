@@ -27,19 +27,29 @@ dependencies[] = file
 dependencies[] = filter
 dependencies[] = image
 dependencies[] = list
+dependencies[] = locale
 dependencies[] = menu
 dependencies[] = node
 dependencies[] = number
 dependencies[] = options
 dependencies[] = path
 dependencies[] = php
-dependencies[] = rdf
 dependencies[] = search
 dependencies[] = system
 dependencies[] = taxonomy
 dependencies[] = text
+dependencies[] = translation
 dependencies[] = update
 dependencies[] = user
+; Custom
+dependencies[] = disable_author_field
+dependencies[] = disable_grant_field
+dependencies[] = disable_platform_field
+dependencies[] = disable_story_field
+dependencies[] = disable_story_link_field
+dependencies[] = disable_story_partner_field
+dependencies[] = disable_submitter_field
+dependencies[] = impact_tracker_ga
 ; Date/Time
 dependencies[] = date
 dependencies[] = date_api
@@ -64,6 +74,23 @@ dependencies[] = filefield_sources
 dependencies[] = link
 ; Link Badges
 dependencies[] = link_badges
+; Mail
+dependencies[] = notify
+; Multilingual
+dependencies[] = l10n_update
+; Multilingual - Internationalization
+dependencies[] = i18n
+dependencies[] = i18n_block
+dependencies[] = i18n_field
+dependencies[] = i18n_menu
+dependencies[] = i18n_node
+dependencies[] = i18n_path
+dependencies[] = i18n_select
+dependencies[] = i18n_string
+dependencies[] = i18n_taxonomy
+dependencies[] = i18n_translation
+dependencies[] = i18n_variable
+dependencies[] = i18nviews
 ; Other
 dependencies[] = disable_term_node_listings
 dependencies[] = entity
@@ -75,10 +102,14 @@ dependencies[] = menu_item_visibility
 dependencies[] = menu_token
 dependencies[] = node_page_disable
 dependencies[] = pathauto
+dependencies[] = publishcontent
 dependencies[] = strongarm
 dependencies[] = title_length
 dependencies[] = token
 dependencies[] = views_term_path
+; Rules
+dependencies[] = rules
+dependencies[] = rules_admin
 ; Statistics
 dependencies[] = googleanalytics
 ; Taxonomy
@@ -88,6 +119,11 @@ dependencies[] = term_merge
 dependencies[] = uuid
 ; User interface
 dependencies[] = autocomplete_deluxe
+; Variable
+dependencies[] = variable
+dependencies[] = variable_admin
+dependencies[] = variable_realm
+dependencies[] = variable_store
 ; Views
 dependencies[] = better_exposed_filters
 dependencies[] = editableviews
@@ -96,12 +132,15 @@ dependencies[] = views
 dependencies[] = views_bulk_operations
 dependencies[] = views_data_export
 dependencies[] = views_field_view
-dependencies[] = views_filters_selective
 dependencies[] = views_json
 dependencies[] = views_ui
 ; Features
 dependencies[] = features
 dependencies[] = base_configuration
+dependencies[] = content_management
+dependencies[] = features_override
+dependencies[] = features_translations
 dependencies[] = outcomes
 dependencies[] = uuid_features
+dependencies[] = translations
 

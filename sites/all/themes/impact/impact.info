@@ -6,16 +6,21 @@ engine = phptemplate
 
 ; Stylesheets
 stylesheets[all][] = libraries/chosen/chosen.min.css
+; Load Stamen visualizer css file from "docroot/sites/all/libraries"
+stylesheets[all][] = ../../libraries/StamenVisualizer/dist/assets/main.css
 stylesheets[all][] = css/styles.css
 
 ; Scripts
 scripts[] = libraries/chosen/chosen.jquery.min.js
+; Load Stamen visualizer js file from "docroot/sites/all/libraries"
+scripts[] = ../../libraries/StamenVisualizer/dist/assets/main.js
 scripts[] = js/scripts.js
 
 ; Regions
 regions[menu_top_left] = Menu Top Left
 regions[menu_top_right] = Menu Top Right
 regions[content] = Content
+regions[footer_menu] = Footer Menu
 
 ; Options
 features[] = favicon

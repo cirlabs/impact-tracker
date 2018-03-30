@@ -1,0 +1,32 @@
+.stamen-visualizer {
+  .paginator {
+    position: relative;
+
+    button, p {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    button {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      line-height: 0;
+      outline: 0;
+
+      &:disabled {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+    }
+
+
+    .label {
+      padding: 0;
+      margin: 0;
+      line-height: 24px;
+      font-size: 0.875rem;
+    }
+  }
+}

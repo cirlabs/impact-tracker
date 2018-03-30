@@ -17,6 +17,33 @@
 
   $(function () {
 
+    // Visualizer
+    if (window.stamen && window.stamen.visualizer) {
+      $('.render-visualizer').click(function (e) {
+        e.preventDefault();
+        $('#visualizer').show();
+        window.stamen.visualizer.initialize({
+          rootNode: $('#visualizer')[0]
+        });
+        $('.hide-visualizer').show();
+        $('.render-visualizer').hide();
+      });
+
+      $('.hide-visualizer').click(function (e) {
+        e.preventDefault();
+        $('.show-visualizer').show();
+        $('.hide-visualizer').hide();
+        $('#visualizer').hide();
+      });
+
+      $('.show-visualizer').click(function (e) {
+        e.preventDefault();
+        $('.show-visualizer').hide();
+        $('.hide-visualizer').show();
+        $('#visualizer').show();
+      });
+    }
+
     // show/hide impact log filters
     $('.impact-filters-toggle').click(function (e) {
       e.preventDefault();
@@ -60,8 +87,8 @@
       $('.hide-timeline').show();
 
 
-      $.get('/activity-log/timeline.json' + query, function (data) {
-        var activities = (typeof data === 'object') ? data.activities : [];
+      //$.get('/activity-log/timeline.json' + query, function (data) {
+        //var activities = (typeof data === 'object') ? data.activities : [];
         $.get('/log/timeline.json' +  query, function (data) {
           if (typeof data !== 'object') {
             $timeline.removeClass('loading');
@@ -100,26 +127,33 @@
             }
           }
 
-          for (var i = 0; i < activities.length; i++) {
-            var activity = activities[i].activity;
-            var date = new Date(activity.date).getTime().toString();
-            if (dates.hasOwnProperty(date)) {
-              if (dates[date].hasOwnProperty('activities')) {
-                dates[date].activities.push(activity);
-              } else {
-                dates[date].activities = [activity];
-              }
-            } else {
-              dates[date] = {}
-              dates[date].activities = [activity];
-            }
-          }
+          //for (var i = 0; i < activities.length; i++) {
+          //  var activity = activities[i].activity;
+          //  var date = new Date(activity.date).getTime().toString();
+          //  if (dates.hasOwnProperty(date)) {
+          //    if (dates[date].hasOwnProperty('activities')) {
+          //      dates[date].activities.push(activity);
+          //    } else {
+          //      dates[date].activities = [activity];
+          //    }
+          //  } else {
+          //    dates[date] = {}
+          //    dates[date].activities = [activity];
+          //  }
+          //}
 
-          console.log(dates);
-
-          var startDate = new Date(outcomes[outcomes.length - 1].outcome.date);
-          var endDate = new Date(outcomes[0].outcome.date);
+          // The start date should be the first day of the month of the first outcome.
+          // There may be outcomes without valid dates at the end of the feed, so we need to filter those out.
+          var startDateGetter = 0;
+          var startDate;
+          do {
+            startDateGetter++;
+            startDate = new Date(outcomes[outcomes.length - startDateGetter].outcome.date);
+          } while (!isValideDate(startDate) || startDateGetter > outcomes.length);
           startDate.setDate(1);
+
+          // The first item in the feed will be the newest outcome, so that's the end date.
+          var endDate = new Date(outcomes[0].outcome.date);
 
           for (var d = startDate; d <= endDate; d.setDate(d.getDate() + 1)) {
             var date = dates[d.getTime()];
@@ -131,13 +165,13 @@
             }
             html += '<div class="dateLabel">' + d.getDate() + '</div>';
             html += '<div class="activities">';
-            if (date && date.activities) {
-              for (var i = 0; i < date.activities.length; i++) {
-                var activity = date.activities[i];
-                html += '<a href="' + activity.path + '"" title="' + activity.title.replace(/['"]+/g, '') + '" class="activity icon-tce" target="_blank"></a>';
-              }
-            }
-            html += '</div>'; // close activities div
+            //if (date && date.activities) {
+            //  for (var i = 0; i < date.activities.length; i++) {
+            //    var activity = date.activities[i];
+            //    html += '<a href="' + activity.path + '"" title="' + activity.title.replace(/['"]+/g, '') + '" class="activity icon-tce" target="_blank"></a>';
+            //  }
+            //}
+            //html += '</div>'; // close activities div
             if (date && date.outcomes) {
               for (var i = 0; i < date.outcomes.length; i++) {
                 var outcome = date.outcomes[i];
@@ -161,14 +195,14 @@
           }
 
           // fix heights
-          var activityHeight = 0;
-          $('#timeline .activities').each(function () {
-            var thisHeight = $(this).outerHeight();
-            if (thisHeight > activityHeight) {
-              activityHeight = thisHeight;
-            }
-          });
-          $('#timeline .activities').height(activityHeight);
+          //var activityHeight = 0;
+          //$('#timeline .activities').each(function () {
+          //  var thisHeight = $(this).outerHeight();
+          //  if (thisHeight > activityHeight) {
+          //    activityHeight = thisHeight;
+          //  }
+          //});
+          //$('#timeline .activities').height(activityHeight);
           var dayHeight = 0;
           $('#timeline .day').each(function () {
             var thisHeight = $(this).height();
@@ -178,7 +212,7 @@
           });
           $('#timeline .day').height(dayHeight);
         });
-      });
+      //});
     });
 
     $('.hide-timeline').click(function (e) {
@@ -201,17 +235,20 @@
     return (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
   }
 
-
-  // ======================================================
-  // select all button on Review Submissions page (/review)
-  // ======================================================
-
-  $(function () {
-    $('#review-submissions-select-all').click(function (e) {
-      e.preventDefault();
-      $('.field-name-field-reviewed input').attr('checked', true);
-    });
-  });
+  // http://stackoverflow.com/a/1353711
+  function isValideDate(date) {
+    if ( Object.prototype.toString.call(date) === "[object Date]" ) {
+      if ( isNaN( date.getTime() ) ) {
+        return false;
+      }
+      else {
+        return true;
+      }
+    }
+    else {
+      return false;
+    }
+  }
 
 
   // =========================================
@@ -225,6 +262,20 @@
         $this.remove();
       }
     })
+  });
+
+
+  // =================================================
+  // hide fiters in Impact Log if they have no options
+  // =================================================
+
+  $(function () {
+    $('.impact-filters td.views-exposed-widget').each(function () {
+      var $filter = $(this);
+      var isChecklist = $filter.find('.form-checkboxes').length !== 0;
+      var options = $filter.find('input').length;
+      if (isChecklist && options === 0) $filter.hide();
+    });
   });
 
 

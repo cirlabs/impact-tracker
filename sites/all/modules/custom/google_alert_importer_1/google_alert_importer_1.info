@@ -1,0 +1,10 @@
+name = Google Alert Importer 1
+core = 7.x
+package = Custom
+dependencies[] = ctools
+dependencies[] = feeds
+dependencies[] = feeds_ex
+features[ctools][] = feeds:feeds_importer_default:1
+features[features_api][] = api:2
+features[feeds_importer][] = google_alert_1
+project path = sites/all/modules/custom

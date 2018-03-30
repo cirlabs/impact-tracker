@@ -1,0 +1,5 @@
+name = Visualizer Google Analytics Integration
+description = Enable and configure Google Analytics for the Impact Visualizer.
+core = 7.x
+package = Custom
+configure = admin/config/system/impact_tracker_ga

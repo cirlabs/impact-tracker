@@ -1,0 +1,4 @@
+name = Disable Platform Field
+description = Removes the Platform field from the Outcome submission form.
+core = 7.x
+package = Custom

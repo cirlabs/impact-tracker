@@ -1,0 +1,29 @@
+.stamen-visualizer {
+  .checkbox-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li.no-value {
+      opacity: 0.3;
+    }
+
+    label {
+      position: relative;
+      display: block;
+      width: 100%;
+      color: #737574;
+      font-size: 14px;
+    }
+
+    label .label {
+      margin-left: 5px;
+    }
+
+    label .counts {
+      position: absolute;
+      right: 5px;
+      font-size: 12px;
+    }
+  }
+}

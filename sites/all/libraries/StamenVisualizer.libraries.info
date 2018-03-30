@@ -1,0 +1,5 @@
+name = StamenVisualizer
+machine name = StamenVisualizer
+description = Provides an interface to the Stamen visualizer
+version = 1
+files[js][] = assets/main.js

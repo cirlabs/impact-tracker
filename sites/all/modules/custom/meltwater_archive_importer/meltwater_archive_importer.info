@@ -1,0 +1,14 @@
+name = Meltwater Archive Importer
+core = 7.x
+package = Custom
+dependencies[] = ctools
+dependencies[] = feeds
+dependencies[] = feeds_tamper
+dependencies[] = feeds_tamper_php
+dependencies[] = feeds_xls
+features[ctools][] = feeds:feeds_importer_default:1
+features[ctools][] = feeds_tamper:feeds_tamper_default:2
+features[features_api][] = api:2
+features[feeds_importer][] = meltwater_archive_importer
+features[feeds_tamper][] = meltwater_archive_importer-date-php
+project path = sites/all/modules/custom

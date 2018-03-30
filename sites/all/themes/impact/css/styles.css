@@ -232,6 +232,27 @@ ul.primary li a {
   padding: 0.5em 0 1em;
 }
 
+/* line 9, ../scss/global/_footer.scss */
+.copyright {
+  float: left;
+}
+
+/* line 13, ../scss/global/_footer.scss */
+.region-footer-menu {
+  float: right;
+}
+/* line 15, ../scss/global/_footer.scss */
+.region-footer-menu ul, .region-footer-menu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 20, ../scss/global/_footer.scss */
+.region-footer-menu li {
+  display: inline-block;
+  margin-left: 0.65em;
+}
+
 /* line 1, ../scss/global/_forms.scss */
 input,
 select,
@@ -273,36 +294,40 @@ input[type="checkbox"] {
 select {
   height: 36px;
 }
+/* line 29, ../scss/global/_forms.scss */
+select[multiple="multiple"] {
+  height: auto;
+}
 
-/* line 31, ../scss/global/_forms.scss */
+/* line 34, ../scss/global/_forms.scss */
 label,
 .fieldset-legend {
   font-weight: bold;
   margin-bottom: 0.5em;
 }
 
-/* line 37, ../scss/global/_forms.scss */
+/* line 40, ../scss/global/_forms.scss */
 fieldset {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-/* line 43, ../scss/global/_forms.scss */
+/* line 46, ../scss/global/_forms.scss */
 .form-item {
   margin: 1.5em 0;
 }
-/* line 45, ../scss/global/_forms.scss */
+/* line 48, ../scss/global/_forms.scss */
 .form-item .description {
   margin-top: 0.5em;
   color: #777;
   font-size: 14px;
 }
-/* line 50, ../scss/global/_forms.scss */
+/* line 53, ../scss/global/_forms.scss */
 .form-item input.error {
   border: 1px solid #a94442;
 }
-/* line 52, ../scss/global/_forms.scss */
+/* line 55, ../scss/global/_forms.scss */
 .form-item input.error:focus {
   border-color: #843534;
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
@@ -310,18 +335,18 @@ fieldset {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
 }
 
-/* line 59, ../scss/global/_forms.scss */
+/* line 62, ../scss/global/_forms.scss */
 .container-inline-date .date-padding {
   padding: 0;
   float: none;
 }
 
-/* line 64, ../scss/global/_forms.scss */
+/* line 67, ../scss/global/_forms.scss */
 .tabledrag-toggle-weight-wrapper {
   display: none;
 }
 
-/* line 68, ../scss/global/_forms.scss */
+/* line 71, ../scss/global/_forms.scss */
 button,
 input[type="button"],
 input[type="submit"],
@@ -338,7 +363,7 @@ input[type="submit"],
   cursor: pointer;
   text-decoration: none;
 }
-/* line 81, ../scss/global/_forms.scss */
+/* line 84, ../scss/global/_forms.scss */
 button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover,
@@ -347,7 +372,7 @@ input[type="submit"]:hover,
   text-decoration: none;
 }
 
-/* line 87, ../scss/global/_forms.scss */
+/* line 90, ../scss/global/_forms.scss */
 input[value="Remove"],
 input[value="Reset"],
 .hide-timeline {
@@ -355,28 +380,28 @@ input[value="Reset"],
   border: 1px solid #d43f3a;
 }
 
-/* line 94, ../scss/global/_forms.scss */
+/* line 97, ../scss/global/_forms.scss */
 .form-type-managed-file {
   border: 1px solid #e7e7e7;
   margin: 0.5em 0 0;
   padding: 10px;
   border-radius: 3px;
 }
-/* line 99, ../scss/global/_forms.scss */
+/* line 102, ../scss/global/_forms.scss */
 .form-type-managed-file .filefield-sources-list {
   margin-bottom: 0.25em;
 }
-/* line 101, ../scss/global/_forms.scss */
+/* line 104, ../scss/global/_forms.scss */
 .form-type-managed-file .filefield-sources-list a {
   color: #777;
   font-size: 14px;
 }
-/* line 104, ../scss/global/_forms.scss */
+/* line 107, ../scss/global/_forms.scss */
 .form-type-managed-file .filefield-sources-list a:hover {
   color: #333;
 }
 
-/* line 111, ../scss/global/_forms.scss */
+/* line 114, ../scss/global/_forms.scss */
 .grippie {
   display: none;
 }
@@ -684,9 +709,8 @@ div.status {
 .impact-filters td {
   vertical-align: top;
   padding: 3px;
-  width: 12.5%;
 }
-/* line 23, ../scss/pages/_impact-activity-log.scss */
+/* line 22, ../scss/pages/_impact-activity-log.scss */
 .impact-filters .views-widget {
   border: 1px solid #e7e7e7;
   background: #fff;
@@ -696,54 +720,54 @@ div.status {
   height: 250px;
   overflow: scroll;
 }
-/* line 32, ../scss/pages/_impact-activity-log.scss */
+/* line 31, ../scss/pages/_impact-activity-log.scss */
 .impact-filters .form-item {
   margin: 0;
   clear: left;
 }
-/* line 36, ../scss/pages/_impact-activity-log.scss */
+/* line 35, ../scss/pages/_impact-activity-log.scss */
 .impact-filters .bef-toggle {
   display: block;
 }
-/* line 39, ../scss/pages/_impact-activity-log.scss */
+/* line 38, ../scss/pages/_impact-activity-log.scss */
 .impact-filters input[type="checkbox"] {
   float: left;
   display: block;
   margin: 2px 0 0 0;
 }
-/* line 45, ../scss/pages/_impact-activity-log.scss */
+/* line 44, ../scss/pages/_impact-activity-log.scss */
 .impact-filters .form-type-bef-checkbox label {
   display: block;
   margin: 5px 0 0 1.25em;
 }
-/* line 50, ../scss/pages/_impact-activity-log.scss */
+/* line 49, ../scss/pages/_impact-activity-log.scss */
 .impact-filters .buttons {
   text-align: right;
   padding: 10px 10px 0 10px;
 }
-/* line 54, ../scss/pages/_impact-activity-log.scss */
+/* line 53, ../scss/pages/_impact-activity-log.scss */
 .impact-filters .views-submit-button,
 .impact-filters .views-reset-button {
   display: inline-block;
   margin-left: 1em;
 }
-/* line 58, ../scss/pages/_impact-activity-log.scss */
+/* line 57, ../scss/pages/_impact-activity-log.scss */
 .impact-filters .views-submit-button input,
 .impact-filters .views-reset-button input {
   font-size: 18px;
   padding-left: 1.5em;
   padding-right: 1.5em;
 }
-/* line 65, ../scss/pages/_impact-activity-log.scss */
+/* line 64, ../scss/pages/_impact-activity-log.scss */
 .impact-filters .views-widget-filter-field_date_value input {
   width: 8em;
 }
-/* line 68, ../scss/pages/_impact-activity-log.scss */
+/* line 67, ../scss/pages/_impact-activity-log.scss */
 .impact-filters .views-widget-filter-field_date_value .description {
   font-size: 12px;
   margin-bottom: 1em;
 }
-/* line 74, ../scss/pages/_impact-activity-log.scss */
+/* line 73, ../scss/pages/_impact-activity-log.scss */
 .impact-filters #edit-title-wrapper {
   position: absolute;
   left: 10px;
@@ -751,81 +775,87 @@ div.status {
   padding: 0;
   width: auto;
 }
-/* line 80, ../scss/pages/_impact-activity-log.scss */
+/* line 79, ../scss/pages/_impact-activity-log.scss */
 .impact-filters #edit-title-wrapper .views-widget {
   height: auto;
   border: none;
   background: none;
   padding: 0;
 }
-/* line 86, ../scss/pages/_impact-activity-log.scss */
+/* line 85, ../scss/pages/_impact-activity-log.scss */
 .impact-filters #edit-title-wrapper label {
   float: left;
   padding: 7px 10px 0 0;
 }
 
-/* line 93, ../scss/pages/_impact-activity-log.scss */
+/* line 92, ../scss/pages/_impact-activity-log.scss */
 .impact-filters-date-presets {
   padding: 0 0 0 1.5em;
   margin: 0;
 }
 
-/* line 98, ../scss/pages/_impact-activity-log.scss */
+/* line 97, ../scss/pages/_impact-activity-log.scss */
 .view-impact-log,
 .view-activity-log {
   font-size: 14px;
 }
-/* line 101, ../scss/pages/_impact-activity-log.scss */
+/* line 100, ../scss/pages/_impact-activity-log.scss */
 .view-impact-log .view-header,
 .view-activity-log .view-header {
   font-style: italic;
   color: #777;
   margin: 1em 0;
 }
-/* line 106, ../scss/pages/_impact-activity-log.scss */
+/* line 105, ../scss/pages/_impact-activity-log.scss */
 .view-impact-log .view-content,
 .view-activity-log .view-content {
   width: 100%;
   overflow-x: scroll;
 }
-/* line 109, ../scss/pages/_impact-activity-log.scss */
+/* line 108, ../scss/pages/_impact-activity-log.scss */
 .view-impact-log .view-content td,
 .view-activity-log .view-content td {
   max-width: 200px;
   padding: 0;
 }
-/* line 112, ../scss/pages/_impact-activity-log.scss */
+/* line 111, ../scss/pages/_impact-activity-log.scss */
 .view-impact-log .view-content td > div,
 .view-activity-log .view-content td > div {
   padding: 8px;
   white-space: nowrap;
   overflow-x: hidden;
 }
-/* line 118, ../scss/pages/_impact-activity-log.scss */
+/* line 117, ../scss/pages/_impact-activity-log.scss */
 .view-impact-log .view-content td.views-field-title,
 .view-activity-log .view-content td.views-field-title {
   max-width: 350px;
 }
-/* line 122, ../scss/pages/_impact-activity-log.scss */
+/* line 121, ../scss/pages/_impact-activity-log.scss */
 .view-impact-log .exposed_filter_data,
 .view-activity-log .exposed_filter_data {
   border: none;
   margin-bottom: 1em;
   font-size: 16px;
 }
-/* line 127, ../scss/pages/_impact-activity-log.scss */
+/* line 126, ../scss/pages/_impact-activity-log.scss */
 .view-impact-log .form-type-checkbox,
 .view-activity-log .form-type-checkbox {
   margin: 0;
 }
+/* line 130, ../scss/pages/_impact-activity-log.scss */
+.view-impact-log #edit-select input, .view-impact-log #edit-actions input,
+.view-activity-log #edit-select input,
+.view-activity-log #edit-actions input {
+  margin: 20px 20px 20px 0;
+}
 
-/* line 134, ../scss/pages/_impact-activity-log.scss */
+/* line 138, ../scss/pages/_impact-activity-log.scss */
 .hide-timeline,
 .show-timeline {
   display: none;
 }
 
-/* line 144, ../scss/pages/_impact-activity-log.scss */
+/* line 148, ../scss/pages/_impact-activity-log.scss */
 #timeline {
   display: none;
   min-height: 200px;
@@ -833,12 +863,12 @@ div.status {
   margin: 1em 0;
   position: relative;
 }
-/* line 150, ../scss/pages/_impact-activity-log.scss */
+/* line 154, ../scss/pages/_impact-activity-log.scss */
 #timeline.loading {
   background: url(../img/loading-large.gif) center no-repeat;
   background-size: 83px;
 }
-/* line 154, ../scss/pages/_impact-activity-log.scss */
+/* line 158, ../scss/pages/_impact-activity-log.scss */
 #timeline .timeline-message {
   display: none;
   position: absolute;
@@ -850,7 +880,7 @@ div.status {
   text-align: center;
   margin-top: -0.5em;
 }
-/* line 165, ../scss/pages/_impact-activity-log.scss */
+/* line 169, ../scss/pages/_impact-activity-log.scss */
 #timeline .day {
   width: 28px;
   display: inline-block;
@@ -861,19 +891,19 @@ div.status {
   box-sizing: content-box;
   vertical-align: top;
 }
-/* line 175, ../scss/pages/_impact-activity-log.scss */
+/* line 179, ../scss/pages/_impact-activity-log.scss */
 #timeline .day:nth-child(odd) {
   background: #f8f8f8;
 }
-/* line 178, ../scss/pages/_impact-activity-log.scss */
+/* line 182, ../scss/pages/_impact-activity-log.scss */
 #timeline .day:last-child {
   border-right: 1px solid #e7e7e7;
 }
-/* line 181, ../scss/pages/_impact-activity-log.scss */
+/* line 185, ../scss/pages/_impact-activity-log.scss */
 #timeline .monthStart {
   border-left: 6px solid #e7e7e7;
 }
-/* line 184, ../scss/pages/_impact-activity-log.scss */
+/* line 188, ../scss/pages/_impact-activity-log.scss */
 #timeline .monthLabel {
   position: absolute;
   top: 8px;
@@ -882,18 +912,18 @@ div.status {
   font-weight: bold;
   font-size: 24px;
 }
-/* line 192, ../scss/pages/_impact-activity-log.scss */
+/* line 196, ../scss/pages/_impact-activity-log.scss */
 #timeline .dateLabel {
   font-size: 14px;
   padding-bottom: 3px;
   border-bottom: 1px solid #e7e7e7;
 }
-/* line 197, ../scss/pages/_impact-activity-log.scss */
+/* line 201, ../scss/pages/_impact-activity-log.scss */
 #timeline .activities {
   border-bottom: 1px solid #e7e7e7;
   padding: 3px 0;
 }
-/* line 201, ../scss/pages/_impact-activity-log.scss */
+/* line 205, ../scss/pages/_impact-activity-log.scss */
 #timeline .activity {
   color: #777;
   display: block;
@@ -901,12 +931,12 @@ div.status {
   font-size: 26px;
   line-height: 0.8;
 }
-/* line 207, ../scss/pages/_impact-activity-log.scss */
+/* line 211, ../scss/pages/_impact-activity-log.scss */
 #timeline .activity:hover {
   color: #333;
   text-decoration: none;
 }
-/* line 212, ../scss/pages/_impact-activity-log.scss */
+/* line 216, ../scss/pages/_impact-activity-log.scss */
 #timeline .node {
   display: block;
   margin-top: 5px;
@@ -916,7 +946,7 @@ div.status {
   height: 20px;
   font-size: 19px;
 }
-/* line 220, ../scss/pages/_impact-activity-log.scss */
+/* line 224, ../scss/pages/_impact-activity-log.scss */
 #timeline .node:before {
   display: block;
   position: absolute;
@@ -925,139 +955,139 @@ div.status {
   top: 0;
   text-align: center;
 }
-/* line 229, ../scss/pages/_impact-activity-log.scss */
+/* line 233, ../scss/pages/_impact-activity-log.scss */
 #timeline .icon-other:before {
   font-size: 0.8em;
   margin-top: 0.1em;
 }
-/* line 233, ../scss/pages/_impact-activity-log.scss */
+/* line 237, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-undefined {
   color: #777;
 }
-/* line 235, ../scss/pages/_impact-activity-log.scss */
+/* line 239, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-undefined:hover {
   color: #333;
 }
-/* line 239, ../scss/pages/_impact-activity-log.scss */
+/* line 243, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-0 {
   color: #E54B4B;
 }
-/* line 241, ../scss/pages/_impact-activity-log.scss */
+/* line 245, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-0:hover {
   color: #dd2020;
 }
-/* line 245, ../scss/pages/_impact-activity-log.scss */
+/* line 249, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-1 {
   color: #E5C64B;
 }
-/* line 247, ../scss/pages/_impact-activity-log.scss */
+/* line 251, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-1:hover {
   color: #ddb720;
 }
-/* line 251, ../scss/pages/_impact-activity-log.scss */
+/* line 255, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-2 {
   color: #887FAA;
 }
-/* line 253, ../scss/pages/_impact-activity-log.scss */
+/* line 257, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-2:hover {
   color: #6d6294;
 }
-/* line 257, ../scss/pages/_impact-activity-log.scss */
+/* line 261, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-3 {
   color: #4178C6;
 }
-/* line 259, ../scss/pages/_impact-activity-log.scss */
+/* line 263, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-3:hover {
   color: #3160a3;
 }
-/* line 263, ../scss/pages/_impact-activity-log.scss */
+/* line 267, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-4 {
   color: #EB7B98;
 }
-/* line 265, ../scss/pages/_impact-activity-log.scss */
+/* line 269, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-4:hover {
   color: #e44f75;
 }
-/* line 269, ../scss/pages/_impact-activity-log.scss */
+/* line 273, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-5 {
   color: #82c440;
 }
-/* line 271, ../scss/pages/_impact-activity-log.scss */
+/* line 275, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-5:hover {
   color: #69a031;
 }
-/* line 275, ../scss/pages/_impact-activity-log.scss */
+/* line 279, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-6 {
   color: #84AEDF;
 }
-/* line 277, ../scss/pages/_impact-activity-log.scss */
+/* line 281, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-6:hover {
   color: #5c93d4;
 }
-/* line 281, ../scss/pages/_impact-activity-log.scss */
+/* line 285, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-7 {
   color: #E5894B;
 }
-/* line 283, ../scss/pages/_impact-activity-log.scss */
+/* line 287, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-7:hover {
   color: #dd6c20;
 }
-/* line 287, ../scss/pages/_impact-activity-log.scss */
+/* line 291, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-8 {
   color: #41C6BC;
 }
-/* line 289, ../scss/pages/_impact-activity-log.scss */
+/* line 293, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-8:hover {
   color: #31a39a;
 }
-/* line 293, ../scss/pages/_impact-activity-log.scss */
+/* line 297, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-9 {
   color: #9A41C6;
 }
-/* line 295, ../scss/pages/_impact-activity-log.scss */
+/* line 299, ../scss/pages/_impact-activity-log.scss */
 #timeline .topic-9:hover {
   color: #7d31a3;
 }
 
-/* line 301, ../scss/pages/_impact-activity-log.scss */
+/* line 305, ../scss/pages/_impact-activity-log.scss */
 #timeline-chart {
   white-space: nowrap;
   overflow-x: scroll;
 }
 
-/* line 306, ../scss/pages/_impact-activity-log.scss */
+/* line 310, ../scss/pages/_impact-activity-log.scss */
 #timeline-key {
   display: none;
   border-top: 1px solid #e7e7e7;
   padding: 20px 0;
 }
 
-/* line 311, ../scss/pages/_impact-activity-log.scss */
+/* line 315, ../scss/pages/_impact-activity-log.scss */
 .timeline-key-section {
   float: left;
   margin-right: 20px;
   padding: 0 20px;
 }
-/* line 315, ../scss/pages/_impact-activity-log.scss */
+/* line 319, ../scss/pages/_impact-activity-log.scss */
 .timeline-key-section h3 {
   margin: 0 0 0.5em 0;
 }
-/* line 318, ../scss/pages/_impact-activity-log.scss */
+/* line 322, ../scss/pages/_impact-activity-log.scss */
 .timeline-key-section ul {
   list-style: none;
   margin: 0;
   padding: 0;
   color: #777;
 }
-/* line 324, ../scss/pages/_impact-activity-log.scss */
+/* line 328, ../scss/pages/_impact-activity-log.scss */
 .timeline-key-section li + li {
   margin-top: 0.25em;
 }
-/* line 327, ../scss/pages/_impact-activity-log.scss */
+/* line 331, ../scss/pages/_impact-activity-log.scss */
 .timeline-key-section + .timeline-key-section {
   border-left: 1px solid #e7e7e7;
 }
-/* line 330, ../scss/pages/_impact-activity-log.scss */
+/* line 334, ../scss/pages/_impact-activity-log.scss */
 .timeline-key-section .icon-macro, .timeline-key-section .field-name-field-macro label, .field-name-field-macro .timeline-key-section label,
 .timeline-key-section .field-name-field-macro .field-label,
 .field-name-field-macro .timeline-key-section .field-label, .timeline-key-section .icon-meso, .timeline-key-section .field-name-field-meso label, .field-name-field-meso .timeline-key-section label,
@@ -1069,12 +1099,12 @@ div.status {
 .field-name-field-media .timeline-key-section .field-label {
   color: #333;
 }
-/* line 333, ../scss/pages/_impact-activity-log.scss */
+/* line 337, ../scss/pages/_impact-activity-log.scss */
 .timeline-key-section span {
   padding-right: 0.5em;
 }
 
-/* line 338, ../scss/pages/_impact-activity-log.scss */
+/* line 342, ../scss/pages/_impact-activity-log.scss */
 .timeline-limit-warning {
   display: none;
   padding: 15px 20px;
@@ -1083,45 +1113,7 @@ div.status {
   border-bottom: 1px solid #faebcc;
 }
 
-/* line 347, ../scss/pages/_impact-activity-log.scss */
+/* line 351, ../scss/pages/_impact-activity-log.scss */
 .impact-log-actions button, .impact-log-actions .button {
   margin-right: 1em;
-}
-
-/* line 4, ../scss/pages/_impact-activity-log-hide-fields.scss */
-.view-impact-log #edit-field-tags-tid-wrapper,
-.view-impact-log #edit-field-tags-code-for-africa-tid-wrapper,
-.view-impact-log #edit-field-tags-pri-tid-wrapper,
-.view-impact-log #edit-field-story-hechinger-tid-wrapper,
-.view-impact-log #edit-field-story-pri-tid-wrapper,
-.view-impact-log #edit-field-submitter-tid-wrapper,
-.view-activity-log #edit-field-tags-tid-wrapper,
-.view-activity-log #edit-field-tags-code-for-africa-tid-wrapper,
-.view-activity-log #edit-field-tags-pri-tid-wrapper,
-.view-activity-log #edit-field-story-hechinger-tid-wrapper,
-.view-activity-log #edit-field-story-pri-tid-wrapper,
-.view-activity-log #edit-field-submitter-tid-wrapper {
-  display: none;
-}
-
-/* line 17, ../scss/pages/_impact-activity-log-hide-fields.scss */
-.domain-cir-test-impact-tracker-org #edit-field-tags-tid-wrapper {
-  display: table-cell;
-}
-
-/* line 25, ../scss/pages/_impact-activity-log-hide-fields.scss */
-.domain-codeforafrica-impact-tracker-org #edit-field-tags-code-for-africa-tid-wrapper {
-  display: table-cell;
-}
-
-/* line 33, ../scss/pages/_impact-activity-log-hide-fields.scss */
-.domain-hechinger-test-impact-tracker-org .view-impact-log #edit-field-story-hechinger-tid-wrapper,
-.domain-hechinger-test-impact-tracker-org .view-impact-log #edit-field-submitter-tid-wrapper {
-  display: table-cell;
-}
-
-/* line 43, ../scss/pages/_impact-activity-log-hide-fields.scss */
-.domain-pri-impact-tracker-org .view-impact-log #edit-field-tags-pri-tid-wrapper,
-.domain-pri-impact-tracker-org .view-impact-log #edit-field-story-pri-tid-wrapper {
-  display: table-cell;
 }

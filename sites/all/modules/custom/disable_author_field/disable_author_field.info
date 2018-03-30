@@ -1,0 +1,4 @@
+name = Disable Author Field
+description = Removes the Author field from the Outcome submission form.
+core = 7.x
+package = Custom

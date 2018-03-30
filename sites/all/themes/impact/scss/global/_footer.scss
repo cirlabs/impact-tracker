@@ -5,3 +5,20 @@
   margin: 0 20px;
   padding: 0.5em 0 1em;
 }
+
+.copyright {
+  float: left;
+}
+
+.region-footer-menu {
+  float: right;
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+    margin-left: 0.65em;
+  }
+}

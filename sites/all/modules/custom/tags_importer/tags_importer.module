@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Tags Importer feature.
+ */
+
+include_once 'tags_importer.features.inc';

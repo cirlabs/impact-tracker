@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Google Alert Importer 2 feature.
+ */
+
+include_once 'google_alert_importer_2.features.inc';

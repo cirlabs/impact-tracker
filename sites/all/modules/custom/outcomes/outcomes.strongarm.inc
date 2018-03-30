@@ -13,6 +13,69 @@ function outcomes_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'disable_term_node_listings_macro';
+  $strongarm->value = 'hide_listing';
+  $export['disable_term_node_listings_macro'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disable_term_node_listings_media';
+  $strongarm->value = 'hide_listing';
+  $export['disable_term_node_listings_media'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disable_term_node_listings_mediums';
+  $strongarm->value = 'hide_listing';
+  $export['disable_term_node_listings_mediums'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disable_term_node_listings_meso';
+  $strongarm->value = 'hide_listing';
+  $export['disable_term_node_listings_meso'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disable_term_node_listings_micro';
+  $strongarm->value = 'hide_listing';
+  $export['disable_term_node_listings_micro'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disable_term_node_listings_publications';
+  $strongarm->value = 'hide_listing';
+  $export['disable_term_node_listings_publications'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disable_term_node_listings_subtopics';
+  $strongarm->value = 'hide_listing';
+  $export['disable_term_node_listings_subtopics'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disable_term_node_listings_tags';
+  $strongarm->value = 'hide_listing';
+  $export['disable_term_node_listings_tags'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disable_term_node_listings_topics';
+  $strongarm->value = 'hide_listing';
+  $export['disable_term_node_listings_topics'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__outcome';
   $strongarm->value = array(
     'view_modes' => array(
@@ -41,7 +104,7 @@ function outcomes_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '12',
+          'weight' => '19',
         ),
       ),
       'display' => array(),

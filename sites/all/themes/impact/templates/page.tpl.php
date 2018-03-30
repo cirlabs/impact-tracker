@@ -92,6 +92,7 @@
   <?php print $feed_icons; ?>
 </div>
 
-<footer class="page-footer" role="contentinfo">
+<footer class="page-footer clearfix" role="contentinfo">
   <div class="copyright">&copy; <?php echo date("Y"); ?> The Center for Investigative Reporting</div>
+  <?php print render($page['footer_menu']); ?>
 </footer>

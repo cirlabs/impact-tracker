@@ -40,6 +40,9 @@
       <button class="render-timeline">Render Timeline Chart</button>
       <button class="hide-timeline">Hide Timeline Chart</button>
       <button class="show-timeline">Show Timeline Chart</button>
+      <button class="render-visualizer">Render Visualizer</button>
+      <button class="hide-visualizer" style="display: none; background: #d9534f; border: 1px solid #d43f3a;">Hide Visualizer</button>
+      <button class="show-visualizer" style="display: none;">Show Visualizer</button>
     <?php endif; ?>
     <?php print $feed_icon; ?>
   </div>
@@ -73,6 +76,28 @@
         </ul>
       </div>
     </div>
+  </div>
+
+  <div id="visualizer" style="display: none;">
+    <script>
+      function visualizerOnSignIn() {
+        window.stamen.visualizer.getAnalyticsData();
+      }
+    </script>
+    <div class="g-signin2" data-onsuccess="visualizerOnSignIn"></div>
+    <section id='visualizer-content' class='stamen-visualizer'>
+      <div class='left block'>
+        <div id='visualizer-meta-filter'></div>
+        <div id='visualizer-meta'></div>
+      </div>
+      <div class='right block'>
+        <div id='visualizer-dates'>
+          <div id='visualizer-time-slice-filter'></div>
+          <div id='visualizer-date-paginator'></div>
+        </div>
+        <div id='visualizer-chart'></div>
+      </div>
+    </section>
   </div>
 
   <?php if ($header): ?>

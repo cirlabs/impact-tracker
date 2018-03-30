@@ -1,0 +1,36 @@
+$base-color: #000;
+$highlight-color: red;
+.stamen-visualizer {
+  .filterer {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      color: $base-color;
+      cursor: pointer;
+
+      &:hover, &.active {
+        color: $highlight-color;
+      }
+
+      &.active {
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+
+    li:after {
+      content: '/';
+      padding: 0 5px;
+      color: $base-color !important;
+      cursor: default !important;
+      pointer-events: none !important;
+    }
+
+    li:last-child:after {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+<?php
+
+
+/**
+ * Implements hook_menu() to create form page.
+ */
+function impact_tracker_ga_menu() {
+  $items = array();
+  $items['admin/config/system/impact_tracker_ga'] = array(
+    'title' => 'Visualizer Google Analytics Integration',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('impact_tracker_ga_form'),
+    'access arguments' => array('access administration pages'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+  return $items;
+}
+
+
+/**
+ * Implements hook_form()
+ */
+function impact_tracker_ga_form($form, &$form_state) {
+  $form['impact_tracker_ga_client_id'] = array(
+    '#type' => 'textfield',
+    '#title' => t('OAuth Client ID'),
+    '#description' => t('Example: 123456789012-abcdefghijklmnopqrstuvwxyz12345678.apps.googleusercontent.com'),
+    '#size' => 100,
+    '#default_value' => variable_get('impact_tracker_ga_client_id'),
+  );
+  $form['impact_tracker_ga_view_id'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Google Analytics View ID'),
+    '#description' => t('Example: 12345678'),
+    '#size' => 10,
+    '#default_value' => variable_get('impact_tracker_ga_view_id'),
+  );
+  return system_settings_form($form);
+}
+
+
+/**
+ * Implements hook_html_head_alter() to add client id and view id meta tags.
+ */
+function impact_tracker_ga_html_head_alter(&$head_elements) {
+  $client_id = variable_get('impact_tracker_ga_client_id');
+  $view_id = variable_get('impact_tracker_ga_view_id');
+  if ($client_id && $view_id) {
+    $head_elements['google-signin-client_id'] = array(
+      '#type' => 'html_tag',
+      '#tag' => 'meta',
+      '#attributes' => array('name' => 'google-signin-client_id', 'content' => $client_id),
+    );
+    $head_elements['google-signin-view_id'] = array(
+      '#type' => 'html_tag',
+      '#tag' => 'meta',
+      '#attributes' => array('name' => 'google-signin-view_id', 'content' => $view_id),
+    );
+    $head_elements['google-signin-scope'] = array(
+      '#type' => 'html_tag',
+      '#tag' => 'meta',
+      '#attributes' => array('name' => 'google-signin-scope', 'content' => 'https://www.googleapis.com/auth/analytics.readonly'),
+    );
+  }
+}
+
+
+/**
+ * Implements hook_page_alter() to add Google api script.
+ */
+function impact_tracker_ga_page_alter(&$page) {
+  $client_id = variable_get('impact_tracker_ga_client_id');
+  $view_id = variable_get('impact_tracker_ga_view_id');
+  if ($client_id && $view_id) {
+    drupal_add_js('https://apis.google.com/js/client:platform.js', 'external');
+  }
+}

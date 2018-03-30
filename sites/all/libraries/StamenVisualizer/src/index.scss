@@ -1,0 +1,99 @@
+/*-------- variables --------*/
+
+$font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+/*-------- end variables --------*/
+
+
+#visualizer {
+  box-sizing: border-box;
+  font-family: $font;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  .stamen-visualizer {
+    position: relative;
+    padding: 1rem;
+    overflow: hidden;
+  
+    .block {
+      display: block;
+      float: left;
+  
+      &.left {
+        width: 33%;
+        padding-right: 1%;
+      }
+      &.right {
+        width: 67%;
+        min-height: 500px;
+        border-left: 1px solid #aaa;
+      }
+    }
+  
+    .filterer {
+      li {
+        color: #cacaca;
+  
+        &.active, &:hover {
+          color: #666666;
+        }
+      }
+    }
+  
+    #visualizer-meta-filter {
+      margin-bottom: 10px;
+  
+      li {
+        font-size: 1rem;
+      }
+    }
+  
+    #visualizer-chart, #visualizer-dates {
+      position: relative;
+    }
+  
+    #visualizer-dates {
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+  
+    #visualizer-time-slice-filter {
+      float: left;
+      margin: 0 0 0 40px;
+      line-height: 24px;
+  
+      li {
+        font-size: 0.875rem;
+      }
+  
+      li + li {
+        margin-left: 10px;
+      }
+  
+      li:after {
+        display: none;
+      }
+    }
+  
+    #visualizer-date-paginator {
+      float: right;
+      margin-right: 40px;
+      color: #696A6C;
+  
+      svg {
+        fill: #696A6C;
+      }
+
+      button {
+        // Fighting with other !important rules site-wide
+        margin-top: 0 !important;
+      }
+    }
+  }
+}
