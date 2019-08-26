@@ -3,7 +3,6 @@ define('FEEDS_EXCEL_CREATOR', 'Drupal - Excel parser');
 
 /**
  * @file
- * 
  */
 /**
  * Callback function to actually retrieve the file.
@@ -37,13 +36,13 @@ function feeds_xls_get_populated_template(){
 }
 
 /**
- * Get a PHPExcel cache object.  This gets the most efficient cache object that
+ * Get a PHPExcel cache object. This gets the most efficient cache object that
  * this environment is capable of using.
  */
 function _feeds_xls_initialise_phpexcel($save_memory = FALSE){
   // Load the library.
   feeds_xls_load_phpexcel();
-  // We use the IGBinary cache method, as it is the quickest.  If we run in to
+  // We use the IGBinary cache method, as it is the quickest. If we run in to
   // memory issues, then the SQLite3 function is far more efficient with memory.
   if($save_memory){
     $cache_method = PHPExcel_CachedObjectStorageFactory::cache_to_sqlite3;
@@ -87,7 +86,7 @@ function feeds_xls_download_populated_template($feeds_importer, $bid = FALSE){
       drupal_goto(arg(0) . '/' . arg(1));
     }
   }else{
-    // This isn't an Excel importer.  Give an error message.
+    // This isn't an Excel importer. Give an error message.
     drupal_set_message(t('The requested Feeds importer does not appear to be using the Excel parser.'), 'error');
     drupal_goto(arg(0) . '/' . arg(1));
   }
@@ -111,35 +110,37 @@ function feeds_xls_create_csv_of_data($feeds_importer, &$context){
     $context['sandbox']['row'] = 0;
     switch($entity_guess){
       case 'node':
-        $results = db_select('node', 'e')->fields('e', array(
+        $query = db_select('node', 'e')->fields('e', array(
           'nid'
-        ))->condition('type', $feeds_importer->processor->config['bundle'])->execute();
+        ))->condition('type', $feeds_importer->processor->config['bundle']);
         $entity_key = 'nid';
         $context['sandbox']['entity'] = 'node';
         break;
       case 'term':
         // The bundle for a term is actually the vid.
         $vocabulary = taxonomy_vocabulary_machine_name_load($feeds_importer->processor->config['vocabulary']);
-        $results = db_select('taxonomy_term_data', 'e')->fields('e', array(
+        $query = db_select('taxonomy_term_data', 'e')->fields('e', array(
           'tid'
-        ))->condition('vid', $vocabulary->vid)->execute();
+        ))->condition('vid', $vocabulary->vid);
         $entity_key = 'tid';
         $entity_guess = 'taxonomy_term';
         $context['sandbox']['entity'] = 'taxonomy_term';
         break;
       case 'file':
-        $results = db_select('file_managed', 'e')->fields('e', array(
+        $query = db_select('file_managed', 'e')->fields('e', array(
           'fid'
-        ))->condition('type', $feeds_importer->processor->config['bundle'])->condition('uri', 'public://eolapi/%', 'NOT LIKE')->execute();
+        ))->condition('type', $feeds_importer->processor->config['bundle']);
         $entity_key = 'fid';
         $context['sandbox']['entity'] = 'file';
         break;
       case 'user':
-        $results = db_select('users', 'e')->fields('e')->condition('uid', 1, '>')->execute();
+        $query = db_select('users', 'e')->fields('e')->condition('uid', 1, '>');
         $entity_key = 'uid';
         $context['sandbox']['entity'] = 'user';
         break;
     }
+    drupal_alter('feeds_xls_template_query', $query, $context['sandbox']['entity'], $entity_key);
+    $results = $query->execute();
     $context['sandbox']['progress'] = 0;
     foreach($results as $row){
       $context['sandbox']['entity_ids'][] = $row->{$entity_key};
@@ -151,7 +152,8 @@ function feeds_xls_create_csv_of_data($feeds_importer, &$context){
     // results array.
     $context['results']['csv_path'] = $context['sandbox']['csv_path'];
     // FIXME - repetition!
-    if($context['sandbox']['max'] > 65534){ // One less than XLS max due to the header row
+    if($context['sandbox']['max'] > 65534){ // One less than XLS max due to the
+                                            // header row
       $context['results']['writer'] = 'Excel2007';
     }else{
       $context['results']['writer'] = 'Excel5';
@@ -183,11 +185,13 @@ function feeds_xls_create_csv_of_data($feeds_importer, &$context){
       $row_values[$key] = '';
       if(strpos($mapping['target'], ':')){
         // We currently know of two mappings (node:title and node:nid) that use
-        // this format.  We'll try to work out which this one is.        
+        // this format. We'll try to work out which this one is.
         $target = $mapping['target'];
         $target = explode(':', $target);
         // The country field is a little awkward, so we strip off the first
         // two parts.
+        // FIXME - This WILL break with the entity language module and some
+        // mappings, so we need to look for the specific field type.
         if(count($target) == 4){
           array_shift($target);
           array_shift($target);
@@ -196,12 +200,63 @@ function feeds_xls_create_csv_of_data($feeds_importer, &$context){
         if(isset($entity->{$target[0]}) && is_array($entity->{$target[0]}) && count($entity->{$target[0]})){
           $cell_values = array();
           // The date field users field:start/field:end, while the node_ref
-          // field uses field:nid/field:title.  We guess which we're using.
+          // field uses field:nid/field:title. We guess which we're using.
           foreach($entity->{$target[0]} as $language => $values){
+            if($language == LANGUAGE_NONE && count($cell_values)){
+              continue;
+            }
+            // FIXME - Why is this loop not foreach($values as ...)?
             foreach($entity->{$target[0]}[$language] as $value){
               switch($target[1]){
+                case 'et':
+                  if($target[2] == $language || $language == LANGUAGE_NONE){
+                    _feeds_xls_create_csv_of_data_helper(FALSE, $mapping, $value, $cell_values);
+                  }
+                  break;
                 case 'iso2':
                   $cell_values[] = $value['iso2'];
+                  break;
+                case 'guid':
+                  $field = field_info_field($target[0]);
+                  if(is_array($entity->{$target[0]}) && count($entity->{$target[0]})){
+                    $cell_values = array();
+                    foreach($entity->{$target[0]} as $language => $values){
+                      foreach($entity->{$target[0]}[$language] as $value){
+                        foreach($value as $subkey => $item){
+                          // Change to the allowed values array().
+                          if($field && !empty($field['settings']['allowed_values'][$item])){
+                            $item = $field['settings']['allowed_values'][$item];
+                          }
+                          switch($subkey){
+                            case 'tid':
+                              // Note, we could do this with a single query, but
+                              // that would place a requirement on the UUID
+                              // module/column,
+                              // so doing it this way keeps it a little simpler.
+                              $guid = db_select('feeds_item', 'f')->condition('entity_type', 'taxonomy_term')->condition('entity_id', $item)->fields('f', array(
+                                'guid'
+                              ))->execute()->fetchField();
+                              if(!$guid){
+                                $term = taxonomy_term_load($item);
+                                $guid = empty($term->uuid) ? '' : $term->uuid;
+                              }
+                              $cell_values[] = $guid;
+                              break;
+                            case 'nid':
+                              $guid = db_select('feeds_item', 'f')->condition('entity_type', 'node')->condition('entity_id', $item)->fields('f', array(
+                                'guid'
+                              ))->execute()->fetchField();
+                              if(!$guid){
+                                $node = node_load($item);
+                                $guid = empty($node->uuid) ? '' : $node->uuid;
+                              }
+                              $cell_values[] = $guid;
+                              break;
+                          }
+                        }
+                      }
+                    }
+                  }
                   break;
                 case 'tid':
                   $cell_values[] = $value['tid'];
@@ -228,7 +283,7 @@ function feeds_xls_create_csv_of_data($feeds_importer, &$context){
                   $cell_values[] = $value['filename'];
                   break;
                 default:
-                  // We most likely have a field collection field.  Lets try to
+                  // We most likely have a field collection field. Lets try to
                   // load the field and check the type.
                   $field = field_info_field($target[0]);
                   if($field['type'] == 'field_collection'){
@@ -267,7 +322,7 @@ function feeds_xls_create_csv_of_data($feeds_importer, &$context){
             $row_values[$key] = implode('|', $gids);
             break;
           case 'guid':
-            // Look for this entity in the feeds_item table.  If not there, we
+            // Look for this entity in the feeds_item table. If not there, we
             // generate an entry for it.
             $guid = FALSE;
             if(isset($entity->uuid)){
@@ -318,74 +373,7 @@ function feeds_xls_create_csv_of_data($feeds_importer, &$context){
                 foreach($entity->{$mapping['target']} as $language => $values){
                   $implosion = '|';
                   foreach($entity->{$mapping['target']}[$language] as $value){
-                    foreach($value as $subkey => $item){
-                      // Change to the allowed values array().
-                      if($field && !empty($field['settings']['allowed_values'][$item])){
-                        $item = $field['settings']['allowed_values'][$item];
-                      }
-                      switch($subkey){
-                        case 'tid':
-                          // Links to a term.  We need to load the term, and get the
-                          // value
-                          $term = taxonomy_term_load($item);
-                          $cell_values[] = $term->name;
-                          break;
-                        case 'licence':
-                          $licences = creative_commons_get_licence_types();
-                          $cell_values[] = $licences[$item];
-                          break;
-                        default:
-                          $cell_values[] = $item;
-                          break;
-                        // The following cases should not be saved to the file
-                        case 'safe_value':
-                        case 'format':
-                          break;
-                        // Handle gm3 fields together.
-                        case 'latitude':
-                        case 'longitude':
-                        case 'region_id':
-                        case 'polygon':
-                        case 'polyline':
-                        case 'rectangle':
-                        case 'gm3_type':
-                          $field = field_info_field($mapping['target']);
-                          switch($field['type']){
-                            // Polygon data.
-                            case 'gm3_region':
-                            case 'gm3_rectangle':
-                            case 'gm3_polygon':
-                            case 'gm3_polyline':
-                              $implosion = "\n";
-                              $cell_values[] = $item;
-                              break;
-                            case 'gm3_point':
-                              // Only enter the data once!
-                              if($subkey == 'latitude'){
-                                $implosion = "\n";
-                                $cell_values[] = "POINT:({$value['latitude']},{$value['longitude']})";
-                              }
-                              break 2;
-                            case 'gm3_combination':
-                              if($subkey == 'gm3_type'){
-                                // Get the field, and work out which one we have.
-                                $implosion = "\n";
-                                $type = array_pop(explode("_", $item));
-                                if($type == 'region'){
-                                  // Fuck me, I am SHIT!
-                                  if(isset($value['region_id']) && $value['region_id']){
-                                    $cell_values[] = 'REGION:' . $value['region_id'];
-                                  }
-                                }else{
-                                  if(isset($value[$type]) && $value[$type]){
-                                    $cell_values[] = strtoupper($type) . ':' . $value[$type];
-                                  }
-                                }
-                              }
-                              break 2;
-                          }
-                      }
-                    }
+                    _feeds_xls_create_csv_of_data_helper($field, $mapping, $value, $cell_values);
                   }
                 }
                 $row_values[$key] = _feeds_xls_get_value(implode($implosion, $cell_values));
@@ -418,10 +406,88 @@ function feeds_xls_create_csv_of_data($feeds_importer, &$context){
 }
 
 /**
+ * Helper function to set cell values based on the structure of the array.
+ */
+function _feeds_xls_create_csv_of_data_helper($field, $mapping, $value, &$cell_values){
+  foreach($value as $subkey => $item){
+    // Change to the allowed values array().
+    if($field && !empty($field['settings']['allowed_values'][$item])){
+      $item = $field['settings']['allowed_values'][$item];
+    }
+    switch($subkey){
+      case 'tid':
+        // Links to a term. We need to load the term, and get the
+        // value
+        $term = taxonomy_term_load($item);
+        $cell_values[] = $term->name;
+        break;
+      case 'licence':
+        $licences = creative_commons_get_licence_types();
+        $cell_values[] = $licences[$item];
+        break;
+      default:
+        $cell_values[] = $item;
+        break;
+      // The following cases should not be saved to the file
+      case 'summary':
+      case 'safe_summary':
+      case 'safe_value':
+      case 'format':
+        break;
+      // Handle gm3 fields together.
+      case 'latitude':
+      case 'longitude':
+      case 'region_id':
+      case 'polygon':
+      case 'polyline':
+      case 'rectangle':
+      case 'gm3_type':
+        $field = field_info_field($mapping['target']);
+        switch($field['type']){
+          // Polygon data.
+          case 'gm3_region':
+          case 'gm3_rectangle':
+          case 'gm3_polygon':
+          case 'gm3_polyline':
+            $implosion = "\n";
+            $cell_values[] = $item;
+            break;
+          case 'gm3_point':
+            // Only enter the data once!
+            if($subkey == 'latitude'){
+              $implosion = "\n";
+              $cell_values[] = "POINT:({$value['latitude']},{$value['longitude']})";
+            }
+            break 2;
+          case 'gm3_combination':
+            if($subkey == 'gm3_type'){
+              // Get the field, and work out which one we have.
+              $implosion = "\n";
+              $type = array_pop(explode("_", $item));
+              if($type == 'region'){
+                // Fuck me, I am SHIT!
+                if(isset($value['region_id']) && $value['region_id']){
+                  $cell_values[] = 'REGION:' . $value['region_id'];
+                }
+              }else{
+                if(isset($value[$type]) && $value[$type]){
+                  $cell_values[] = strtoupper($type) . ':' . $value[$type];
+                }
+              }
+            }
+            break 2;
+        }
+    }
+  }
+}
+
+/**
  * Helper function to get a value that can be inserted into a cell.
  */
 function _feeds_xls_get_value($value){
-  if(substr($value, 0, 1) == '='){return "'" . $value;}
+  if(substr($value, 0, 1) == '='){
+    return "'" . $value;
+  }
   return $value;
 }
 
@@ -462,7 +528,7 @@ function feeds_xls_download_template($feeds_importer){
       drupal_goto(arg(0) . '/' . arg(1));
     }
   }else{
-    // This isn't an Excel importer.  Give an error message.
+    // This isn't an Excel importer. Give an error message.
     drupal_set_message(t('The requested Feeds importer does not appear to be using the Excel parser.'), 'error');
     drupal_goto(arg(0) . '/' . arg(1));
   }
@@ -506,7 +572,8 @@ function feeds_xls_set_headers($feeds_importer, $objPHPExcel, $output = 'php://o
     '!feeds_name' => $feeds_importer->config['name']
   ));
   $objPHPExcel->getProperties()->setCreator(FEEDS_EXCEL_CREATOR)->setLastModifiedBy(FEEDS_EXCEL_CREATOR)->setTitle($title);
-  // Set active sheet index to the first sheet, so Excel opens this as the first sheet
+  // Set active sheet index to the first sheet, so Excel opens this as the first
+  // sheet
   $objPHPExcel->setActiveSheetIndex(0);
   // Add some data
   $sheet = $objPHPExcel->getActiveSheet();
@@ -550,7 +617,8 @@ function feeds_xls_set_headers($feeds_importer, $objPHPExcel, $output = 'php://o
         $field = field_info_field($header['target']);
       }
       if($field){
-        // Get the field instance, so that we can check if this field is required.
+        // Get the field instance, so that we can check if this field is
+        // required.
         $class = get_class($feeds_importer->processor);
         $field_instance = field_info_instance($entity_type, $field['field_name'], $bundle);
         $objValidation = $sheet->getDataValidation($column . '2:' . $column . '65536');
@@ -606,12 +674,14 @@ function feeds_xls_set_headers($feeds_importer, $objPHPExcel, $output = 'php://o
           }
         }
         if(count($allowed_values)){
-          $objValidation->setType(PHPExcel_Cell_DataValidation::TYPE_LIST);
-          $objValidation->setErrorStyle(PHPExcel_Cell_DataValidation::STYLE_STOP);
-          $objValidation->setShowDropDown(TRUE);
-          $objValidation->setErrorTitle('Input error');
-          $objValidation->setError(t('Your input did not match one of the allowed values.'));
-          $objValidation->setPromptTitle(t('Allowed input'));
+          if(!isset($field['cardinality']) || $field['cardinality'] < 2){
+            $objValidation->setType(PHPExcel_Cell_DataValidation::TYPE_LIST);
+            $objValidation->setErrorStyle(PHPExcel_Cell_DataValidation::STYLE_STOP);
+            $objValidation->setShowDropDown(TRUE);
+            $objValidation->setErrorTitle('Input error');
+            $objValidation->setError(t('Your input did not match one of the allowed values.'));
+            $objValidation->setPromptTitle(t('Allowed input'));
+          }
           $row = 0;
           foreach($allowed_values as $allowed_value){
             $num_sheets = count($objPHPExcel->getAllSheets());
