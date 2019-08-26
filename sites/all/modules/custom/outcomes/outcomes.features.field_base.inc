@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * outcomes.features.field_base.inc
@@ -411,6 +412,7 @@ function outcomes_field_default_field_bases() {
     'module' => 'field_collection',
     'settings' => array(
       'hide_blank_items' => 1,
+      'hide_initial_item' => FALSE,
       'path' => '',
     ),
     'translatable' => 0,
@@ -529,6 +531,7 @@ function outcomes_field_default_field_bases() {
     'module' => 'field_collection',
     'settings' => array(
       'hide_blank_items' => 1,
+      'hide_initial_item' => FALSE,
       'path' => '',
     ),
     'translatable' => 0,

@@ -2,6 +2,7 @@ name = Content Management
 core = 7.x
 package = Custom
 dependencies[] = ctools
+dependencies[] = outcomes
 dependencies[] = views
 dependencies[] = views_bulk_operations
 features[ctools][] = views:views_default:3.0

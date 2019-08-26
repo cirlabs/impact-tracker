@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * outcomes.rules_defaults.inc

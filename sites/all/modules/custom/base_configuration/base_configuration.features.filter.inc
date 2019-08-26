@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * base_configuration.features.filter.inc

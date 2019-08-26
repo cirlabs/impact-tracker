@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * base_configuration.features.fe_block_settings.inc
@@ -27,7 +28,7 @@ function base_configuration_default_fe_block_settings() {
         'region' => 'footer_menu',
         'status' => 1,
         'theme' => 'impact',
-        'weight' => -7,
+        'weight' => -8,
       ),
       'seven' => array(
         'region' => '',
@@ -83,7 +84,7 @@ function base_configuration_default_fe_block_settings() {
         'region' => 'menu_top_left',
         'status' => 1,
         'theme' => 'impact',
-        'weight' => 0,
+        'weight' => -8,
       ),
       'seven' => array(
         'region' => '',
@@ -111,7 +112,7 @@ function base_configuration_default_fe_block_settings() {
         'region' => 'menu_top_right',
         'status' => 1,
         'theme' => 'impact',
-        'weight' => -8,
+        'weight' => -7,
       ),
       'seven' => array(
         'region' => '',
@@ -139,7 +140,7 @@ function base_configuration_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'impact',
-        'weight' => 0,
+        'weight' => -8,
       ),
       'seven' => array(
         'region' => '',

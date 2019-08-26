@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * base_configuration.features.field_base.inc

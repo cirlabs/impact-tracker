@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * base_configuration.features.user_permission.inc
@@ -15,7 +16,6 @@ function base_configuration_user_default_permissions() {
     'name' => 'access administration menu',
     'roles' => array(
       'administrator' => 'administrator',
-      'developer' => 'developer',
       'editor' => 'editor',
     ),
     'module' => 'admin_menu',
@@ -26,7 +26,7 @@ function base_configuration_user_default_permissions() {
     'name' => 'access administration pages',
     'roles' => array(
       'administrator' => 'administrator',
-      'developer' => 'developer',
+      'editor' => 'editor',
     ),
     'module' => 'system',
   );
@@ -35,7 +35,7 @@ function base_configuration_user_default_permissions() {
   $permissions['access all views'] = array(
     'name' => 'access all views',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'views',
   );
@@ -44,6 +44,7 @@ function base_configuration_user_default_permissions() {
   $permissions['access content'] = array(
     'name' => 'access content',
     'roles' => array(
+      'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
@@ -55,7 +56,6 @@ function base_configuration_user_default_permissions() {
     'name' => 'access content overview',
     'roles' => array(
       'administrator' => 'administrator',
-      'developer' => 'developer',
       'editor' => 'editor',
     ),
     'module' => 'node',
@@ -65,7 +65,7 @@ function base_configuration_user_default_permissions() {
   $permissions['access contextual links'] = array(
     'name' => 'access contextual links',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'contextual',
   );
@@ -76,7 +76,6 @@ function base_configuration_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
-      'editor' => 'editor',
     ),
     'module' => 'notify',
   );
@@ -85,7 +84,7 @@ function base_configuration_user_default_permissions() {
   $permissions['access private fields'] = array(
     'name' => 'access private fields',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
   );
@@ -95,7 +94,6 @@ function base_configuration_user_default_permissions() {
     'name' => 'access site in maintenance mode',
     'roles' => array(
       'administrator' => 'administrator',
-      'developer' => 'developer',
     ),
     'module' => 'system',
   );
@@ -104,7 +102,7 @@ function base_configuration_user_default_permissions() {
   $permissions['access site reports'] = array(
     'name' => 'access site reports',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'system',
   );
@@ -114,7 +112,6 @@ function base_configuration_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(
       'administrator' => 'administrator',
-      'developer' => 'developer',
     ),
     'module' => 'user',
   );
@@ -123,7 +120,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer actions'] = array(
     'name' => 'administer actions',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'system',
   );
@@ -132,7 +129,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer blocks'] = array(
     'name' => 'administer blocks',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'block',
   );
@@ -141,7 +138,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer content translations'] = array(
     'name' => 'administer content translations',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'i18n_node',
   );
@@ -150,7 +147,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer content types'] = array(
     'name' => 'administer content types',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -159,7 +156,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer contexts'] = array(
     'name' => 'administer contexts',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'context_ui',
   );
@@ -168,7 +165,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer features'] = array(
     'name' => 'administer features',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'features',
   );
@@ -177,7 +174,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer feeds'] = array(
     'name' => 'administer feeds',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'feeds',
   );
@@ -186,7 +183,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer feeds_tamper'] = array(
     'name' => 'administer feeds_tamper',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'feeds_tamper',
   );
@@ -195,7 +192,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer field collections'] = array(
     'name' => 'administer field collections',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'field_collection',
   );
@@ -204,7 +201,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer field permissions'] = array(
     'name' => 'administer field permissions',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
   );
@@ -213,7 +210,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer filters'] = array(
     'name' => 'administer filters',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'filter',
   );
@@ -223,7 +220,6 @@ function base_configuration_user_default_permissions() {
     'name' => 'administer google analytics',
     'roles' => array(
       'administrator' => 'administrator',
-      'developer' => 'developer',
     ),
     'module' => 'googleanalytics',
   );
@@ -232,7 +228,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer image styles'] = array(
     'name' => 'administer image styles',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'image',
   );
@@ -241,7 +237,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer languages'] = array(
     'name' => 'administer languages',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'locale',
   );
@@ -250,7 +246,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'menu',
   );
@@ -259,7 +255,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer menu attributes'] = array(
     'name' => 'administer menu attributes',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'menu_attributes',
   );
@@ -268,7 +264,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer menu badges'] = array(
     'name' => 'administer menu badges',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'menu_badges',
   );
@@ -277,7 +273,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer menu_token'] = array(
     'name' => 'administer menu_token',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'menu_token',
   );
@@ -286,7 +282,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer modules'] = array(
     'name' => 'administer modules',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'system',
   );
@@ -295,7 +291,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer nodes'] = array(
     'name' => 'administer nodes',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -322,7 +318,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer pathauto'] = array(
     'name' => 'administer pathauto',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'pathauto',
   );
@@ -332,7 +328,6 @@ function base_configuration_user_default_permissions() {
     'name' => 'administer permissions',
     'roles' => array(
       'administrator' => 'administrator',
-      'developer' => 'developer',
     ),
     'module' => 'user',
   );
@@ -341,7 +336,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer profiler builder'] = array(
     'name' => 'administer profiler builder',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'profiler_builder',
   );
@@ -350,7 +345,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer search'] = array(
     'name' => 'administer search',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'search',
   );
@@ -359,7 +354,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer site configuration'] = array(
     'name' => 'administer site configuration',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'system',
   );
@@ -368,7 +363,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer software updates'] = array(
     'name' => 'administer software updates',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'system',
   );
@@ -377,7 +372,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer taxonomy'] = array(
     'name' => 'administer taxonomy',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'taxonomy',
   );
@@ -386,7 +381,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer themes'] = array(
     'name' => 'administer themes',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'system',
   );
@@ -395,7 +390,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer url aliases'] = array(
     'name' => 'administer url aliases',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'path',
   );
@@ -405,7 +400,6 @@ function base_configuration_user_default_permissions() {
     'name' => 'administer users',
     'roles' => array(
       'administrator' => 'administrator',
-      'developer' => 'developer',
     ),
     'module' => 'user',
   );
@@ -414,7 +408,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer uuid'] = array(
     'name' => 'administer uuid',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'uuid',
   );
@@ -423,7 +417,7 @@ function base_configuration_user_default_permissions() {
   $permissions['administer views'] = array(
     'name' => 'administer views',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'views',
   );
@@ -432,7 +426,7 @@ function base_configuration_user_default_permissions() {
   $permissions['block IP addresses'] = array(
     'name' => 'block IP addresses',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'system',
   );
@@ -441,7 +435,7 @@ function base_configuration_user_default_permissions() {
   $permissions['bypass node access'] = array(
     'name' => 'bypass node access',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -451,7 +445,6 @@ function base_configuration_user_default_permissions() {
     'name' => 'cancel account',
     'roles' => array(
       'administrator' => 'administrator',
-      'developer' => 'developer',
     ),
     'module' => 'user',
   );
@@ -461,7 +454,6 @@ function base_configuration_user_default_permissions() {
     'name' => 'change own username',
     'roles' => array(
       'administrator' => 'administrator',
-      'developer' => 'developer',
     ),
     'module' => 'user',
   );
@@ -470,74 +462,43 @@ function base_configuration_user_default_permissions() {
   $permissions['context ajax block access'] = array(
     'name' => 'context ajax block access',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'context_ui',
-  );
-
-  // Exported permission: 'create page content'.
-  $permissions['create page content'] = array(
-    'name' => 'create page content',
-    'roles' => array(),
-    'module' => 'node',
   );
 
   // Exported permission: 'create url aliases'.
   $permissions['create url aliases'] = array(
     'name' => 'create url aliases',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'path',
-  );
-
-  // Exported permission: 'delete any page content'.
-  $permissions['delete any page content'] = array(
-    'name' => 'delete any page content',
-    'roles' => array(),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete own page content'.
-  $permissions['delete own page content'] = array(
-    'name' => 'delete own page content',
-    'roles' => array(),
-    'module' => 'node',
   );
 
   // Exported permission: 'delete revisions'.
   $permissions['delete revisions'] = array(
     'name' => 'delete revisions',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'display drupal links'.
   $permissions['display drupal links'] = array(
     'name' => 'display drupal links',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'admin_menu',
-  );
-
-  // Exported permission: 'edit any page content'.
-  $permissions['edit any page content'] = array(
-    'name' => 'edit any page content',
-    'roles' => array(),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit own page content'.
-  $permissions['edit own page content'] = array(
-    'name' => 'edit own page content',
-    'roles' => array(),
-    'module' => 'node',
   );
 
   // Exported permission: 'feeds xls allow download of all entities'.
   $permissions['feeds xls allow download of all entities'] = array(
     'name' => 'feeds xls allow download of all entities',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'feeds_xls',
   );
@@ -547,7 +508,6 @@ function base_configuration_user_default_permissions() {
     'name' => 'flush caches',
     'roles' => array(
       'administrator' => 'administrator',
-      'developer' => 'developer',
     ),
     'module' => 'admin_menu',
   );
@@ -556,7 +516,7 @@ function base_configuration_user_default_permissions() {
   $permissions['generate features'] = array(
     'name' => 'generate features',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'features',
   );
@@ -565,7 +525,7 @@ function base_configuration_user_default_permissions() {
   $permissions['manage features'] = array(
     'name' => 'manage features',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'features',
   );
@@ -575,7 +535,6 @@ function base_configuration_user_default_permissions() {
     'name' => 'merge terms',
     'roles' => array(
       'administrator' => 'administrator',
-      'developer' => 'developer',
     ),
     'module' => 'term_merge',
   );
@@ -584,7 +543,7 @@ function base_configuration_user_default_permissions() {
   $permissions['notify of path changes'] = array(
     'name' => 'notify of path changes',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'pathauto',
   );
@@ -593,7 +552,7 @@ function base_configuration_user_default_permissions() {
   $permissions['opt-in or out of tracking'] = array(
     'name' => 'opt-in or out of tracking',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'googleanalytics',
   );
@@ -602,15 +561,8 @@ function base_configuration_user_default_permissions() {
   $permissions['publish any content'] = array(
     'name' => 'publish any content',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
-    'module' => 'publishcontent',
-  );
-
-  // Exported permission: 'publish any outcome content'.
-  $permissions['publish any outcome content'] = array(
-    'name' => 'publish any outcome content',
-    'roles' => array(),
     'module' => 'publishcontent',
   );
 
@@ -623,31 +575,11 @@ function base_configuration_user_default_permissions() {
     'module' => 'publishcontent',
   );
 
-  // Exported permission: 'publish editable outcome content'.
-  $permissions['publish editable outcome content'] = array(
-    'name' => 'publish editable outcome content',
-    'roles' => array(
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'publishcontent',
-  );
-
-  // Exported permission: 'publish own outcome content'.
-  $permissions['publish own outcome content'] = array(
-    'name' => 'publish own outcome content',
-    'roles' => array(
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'publishcontent',
-  );
-
   // Exported permission: 'rename features'.
   $permissions['rename features'] = array(
     'name' => 'rename features',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'features',
   );
@@ -655,7 +587,9 @@ function base_configuration_user_default_permissions() {
   // Exported permission: 'revert revisions'.
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -663,7 +597,7 @@ function base_configuration_user_default_permissions() {
   $permissions['search content'] = array(
     'name' => 'search content',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'search',
   );
@@ -673,7 +607,6 @@ function base_configuration_user_default_permissions() {
     'name' => 'select account cancellation method',
     'roles' => array(
       'administrator' => 'administrator',
-      'developer' => 'developer',
     ),
     'module' => 'user',
   );
@@ -682,7 +615,7 @@ function base_configuration_user_default_permissions() {
   $permissions['translate admin strings'] = array(
     'name' => 'translate admin strings',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'i18n_string',
   );
@@ -691,7 +624,7 @@ function base_configuration_user_default_permissions() {
   $permissions['translate content'] = array(
     'name' => 'translate content',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'translation',
   );
@@ -700,7 +633,7 @@ function base_configuration_user_default_permissions() {
   $permissions['translate interface'] = array(
     'name' => 'translate interface',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'locale',
   );
@@ -709,7 +642,7 @@ function base_configuration_user_default_permissions() {
   $permissions['translate user-defined strings'] = array(
     'name' => 'translate user-defined strings',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'i18n_string',
   );
@@ -718,15 +651,8 @@ function base_configuration_user_default_permissions() {
   $permissions['unpublish any content'] = array(
     'name' => 'unpublish any content',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
-    'module' => 'publishcontent',
-  );
-
-  // Exported permission: 'unpublish any outcome content'.
-  $permissions['unpublish any outcome content'] = array(
-    'name' => 'unpublish any outcome content',
-    'roles' => array(),
     'module' => 'publishcontent',
   );
 
@@ -739,25 +665,11 @@ function base_configuration_user_default_permissions() {
     'module' => 'publishcontent',
   );
 
-  // Exported permission: 'unpublish editable outcome content'.
-  $permissions['unpublish editable outcome content'] = array(
-    'name' => 'unpublish editable outcome content',
-    'roles' => array(),
-    'module' => 'publishcontent',
-  );
-
-  // Exported permission: 'unpublish own outcome content'.
-  $permissions['unpublish own outcome content'] = array(
-    'name' => 'unpublish own outcome content',
-    'roles' => array(),
-    'module' => 'publishcontent',
-  );
-
   // Exported permission: 'use PHP for settings'.
   $permissions['use PHP for settings'] = array(
     'name' => 'use PHP for settings',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'php',
   );
@@ -766,7 +678,7 @@ function base_configuration_user_default_permissions() {
   $permissions['use PHP for tracking visibility'] = array(
     'name' => 'use PHP for tracking visibility',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'googleanalytics',
   );
@@ -775,7 +687,7 @@ function base_configuration_user_default_permissions() {
   $permissions['use advanced search'] = array(
     'name' => 'use advanced search',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'search',
   );
@@ -784,25 +696,16 @@ function base_configuration_user_default_permissions() {
   $permissions['use ctools import'] = array(
     'name' => 'use ctools import',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'ctools',
-  );
-
-  // Exported permission: 'use text format full_html'.
-  $permissions['use text format full_html'] = array(
-    'name' => 'use text format full_html',
-    'roles' => array(
-      'developer' => 'developer',
-    ),
-    'module' => 'filter',
   );
 
   // Exported permission: 'use text format php_code'.
   $permissions['use text format php_code'] = array(
     'name' => 'use text format php_code',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'filter',
   );
@@ -810,14 +713,18 @@ function base_configuration_user_default_permissions() {
   // Exported permission: 'view own unpublished content'.
   $permissions['view own unpublished content'] = array(
     'name' => 'view own unpublished content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'view revisions'.
   $permissions['view revisions'] = array(
     'name' => 'view revisions',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -825,7 +732,7 @@ function base_configuration_user_default_permissions() {
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
     'roles' => array(
-      'developer' => 'developer',
+      'administrator' => 'administrator',
     ),
     'module' => 'system',
   );

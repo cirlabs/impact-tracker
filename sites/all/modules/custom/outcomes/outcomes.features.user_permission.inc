@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * outcomes.features.user_permission.inc
@@ -129,7 +130,6 @@ function outcomes_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
-      'developer' => 'developer',
     ),
     'module' => 'taxonomy_access_fix',
   );
@@ -148,7 +148,6 @@ function outcomes_user_default_permissions() {
     'name' => 'create field_reviewed',
     'roles' => array(
       'administrator' => 'administrator',
-      'developer' => 'developer',
       'editor' => 'editor',
     ),
     'module' => 'field_permissions',
@@ -158,6 +157,7 @@ function outcomes_user_default_permissions() {
   $permissions['create outcome content'] = array(
     'name' => 'create outcome content',
     'roles' => array(
+      'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
@@ -325,7 +325,6 @@ function outcomes_user_default_permissions() {
     'name' => 'edit field_reviewed',
     'roles' => array(
       'administrator' => 'administrator',
-      'developer' => 'developer',
       'editor' => 'editor',
     ),
     'module' => 'field_permissions',
@@ -336,7 +335,6 @@ function outcomes_user_default_permissions() {
     'name' => 'edit own field_reviewed',
     'roles' => array(
       'administrator' => 'administrator',
-      'developer' => 'developer',
       'editor' => 'editor',
     ),
     'module' => 'field_permissions',
@@ -481,99 +479,198 @@ function outcomes_user_default_permissions() {
   // Exported permission: 'merge authors terms'.
   $permissions['merge authors terms'] = array(
     'name' => 'merge authors terms',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'term_merge',
   );
 
   // Exported permission: 'merge grants terms'.
   $permissions['merge grants terms'] = array(
     'name' => 'merge grants terms',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'term_merge',
   );
 
   // Exported permission: 'merge macro terms'.
   $permissions['merge macro terms'] = array(
     'name' => 'merge macro terms',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'term_merge',
   );
 
   // Exported permission: 'merge media terms'.
   $permissions['merge media terms'] = array(
     'name' => 'merge media terms',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'term_merge',
   );
 
   // Exported permission: 'merge mediums terms'.
   $permissions['merge mediums terms'] = array(
     'name' => 'merge mediums terms',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'term_merge',
   );
 
   // Exported permission: 'merge meso terms'.
   $permissions['merge meso terms'] = array(
     'name' => 'merge meso terms',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'term_merge',
   );
 
   // Exported permission: 'merge micro terms'.
   $permissions['merge micro terms'] = array(
     'name' => 'merge micro terms',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'term_merge',
   );
 
   // Exported permission: 'merge platforms terms'.
   $permissions['merge platforms terms'] = array(
     'name' => 'merge platforms terms',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'term_merge',
   );
 
   // Exported permission: 'merge publications terms'.
   $permissions['merge publications terms'] = array(
     'name' => 'merge publications terms',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'term_merge',
   );
 
   // Exported permission: 'merge stories terms'.
   $permissions['merge stories terms'] = array(
     'name' => 'merge stories terms',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'term_merge',
   );
 
   // Exported permission: 'merge submitters terms'.
   $permissions['merge submitters terms'] = array(
     'name' => 'merge submitters terms',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'term_merge',
   );
 
   // Exported permission: 'merge subtopics terms'.
   $permissions['merge subtopics terms'] = array(
     'name' => 'merge subtopics terms',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'term_merge',
   );
 
   // Exported permission: 'merge tags terms'.
   $permissions['merge tags terms'] = array(
     'name' => 'merge tags terms',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'term_merge',
   );
 
   // Exported permission: 'merge topics terms'.
   $permissions['merge topics terms'] = array(
     'name' => 'merge topics terms',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'term_merge',
+  );
+
+  // Exported permission: 'publish any outcome content'.
+  $permissions['publish any outcome content'] = array(
+    'name' => 'publish any outcome content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish editable outcome content'.
+  $permissions['publish editable outcome content'] = array(
+    'name' => 'publish editable outcome content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'publish own outcome content'.
+  $permissions['publish own outcome content'] = array(
+    'name' => 'publish own outcome content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish any outcome content'.
+  $permissions['unpublish any outcome content'] = array(
+    'name' => 'unpublish any outcome content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish editable outcome content'.
+  $permissions['unpublish editable outcome content'] = array(
+    'name' => 'unpublish editable outcome content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'unpublish own outcome content'.
+  $permissions['unpublish own outcome content'] = array(
+    'name' => 'unpublish own outcome content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'publishcontent',
+  );
+
+  // Exported permission: 'use Rules component rules_mark_as_reviewed'.
+  $permissions['use Rules component rules_mark_as_reviewed'] = array(
+    'name' => 'use Rules component rules_mark_as_reviewed',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'rules',
   );
 
   // Exported permission: 'view any outcome content'.
@@ -582,7 +679,6 @@ function outcomes_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
-      'developer' => 'developer',
     ),
     'module' => 'node_view_permissions',
   );
@@ -592,7 +688,6 @@ function outcomes_user_default_permissions() {
     'name' => 'view field_reviewed',
     'roles' => array(
       'administrator' => 'administrator',
-      'developer' => 'developer',
       'editor' => 'editor',
     ),
     'module' => 'field_permissions',
@@ -603,7 +698,6 @@ function outcomes_user_default_permissions() {
     'name' => 'view own field_reviewed',
     'roles' => array(
       'administrator' => 'administrator',
-      'developer' => 'developer',
       'editor' => 'editor',
     ),
     'module' => 'field_permissions',
@@ -615,7 +709,6 @@ function outcomes_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
-      'developer' => 'developer',
     ),
     'module' => 'node_view_permissions',
   );

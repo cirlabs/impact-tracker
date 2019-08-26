@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * base_configuration.features.menu_links.inc
@@ -18,13 +19,13 @@ function base_configuration_menu_default_menu_links() {
     'link_title' => 'Impact Log',
     'options' => array(
       'alter' => TRUE,
+      'identifier' => 'main-menu_impact-log:log',
       'attributes' => array(),
       'item_attributes' => array(
         'id' => '',
         'class' => '',
         'style' => '',
       ),
-      'identifier' => 'main-menu_impact-log:log',
     ),
     'module' => 'system',
     'hidden' => 0,
