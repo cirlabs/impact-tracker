@@ -1,3 +1,7 @@
+# This project has been deprecated and was archived July 2022.
+
+---
+
 # Impact Tracker
 
 The Impact Tracker is built with Drupal. This repository is not a complete Drupal setup, but it does contain everything you will need to install Drupal and all necessary dependencies.
